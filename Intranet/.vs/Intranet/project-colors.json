@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9067f18e-4889-498b-870a-0a5a344fea6b": {
+      "ProjectGuid": "9067f18e-4889-498b-870a-0a5a344fea6b",
+      "DisplayName": "Intranet",
+      "ColorIndex": 0
+    },
+    "4d80ff3b-1c7a-46d0-b96b-8ee6ea6acb0e": {
+      "ProjectGuid": "4d80ff3b-1c7a-46d0-b96b-8ee6ea6acb0e",
+      "DisplayName": "TpIntranetEntreprise",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
