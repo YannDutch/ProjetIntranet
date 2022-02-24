@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet", "Intranet\Intranet.csproj", "{9067F18E-4889-498B-870A-0A5A344FEA6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TpIntranetEntreprise", "TpIntranetEntreprise\TpIntranetEntreprise.csproj", "{4D80FF3B-1C7A-46D0-B96B-8EE6EA6ACB0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9067F18E-4889-498B-870A-0A5A344FEA6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9067F18E-4889-498B-870A-0A5A344FEA6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9067F18E-4889-498B-870A-0A5A344FEA6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9067F18E-4889-498B-870A-0A5A344FEA6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D80FF3B-1C7A-46D0-B96B-8EE6EA6ACB0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D80FF3B-1C7A-46D0-B96B-8EE6EA6ACB0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D80FF3B-1C7A-46D0-B96B-8EE6EA6ACB0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D80FF3B-1C7A-46D0-B96B-8EE6EA6ACB0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CB6E0DE-101B-4FF4-8214-C87855FE79D3}
+	EndGlobalSection
+EndGlobal
