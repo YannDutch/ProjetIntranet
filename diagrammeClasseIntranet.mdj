@@ -191,19 +191,31 @@
 										},
 										{
 											"_type": "UMLAttributeView",
+<<<<<<< HEAD
 											"_id": "AAAAAAF/LDQdumPI970=",
+=======
+											"_id": "AAAAAAF/LDT2GYEhZrk=",
+>>>>>>> 44ce3dbb79afecd41bf0220260952bb60e98ccca
 											"_parent": {
 												"$ref": "AAAAAAF/KES/fTNkIzY="
 											},
 											"model": {
+<<<<<<< HEAD
 												"$ref": "AAAAAAF/LDQdp2PF7fA="
+=======
+												"$ref": "AAAAAAF/LDT1/YEeiAY="
+>>>>>>> 44ce3dbb79afecd41bf0220260952bb60e98ccca
 											},
 											"font": "Arial;13;0",
 											"left": 525,
 											"top": 282,
 											"width": 175.21435546875,
 											"height": 13,
+<<<<<<< HEAD
 											"text": "-matricule: int",
+=======
+											"text": "-Matricule: int",
+>>>>>>> 44ce3dbb79afecd41bf0220260952bb60e98ccca
 											"horizontalAlignment": 0
 										}
 									],
@@ -5630,8 +5642,13 @@
 										"$ref": "AAAAAAF/KKd0ReirsVc="
 									},
 									"font": "Arial;13;0",
+<<<<<<< HEAD
 									"left": 567,
 									"top": 593,
+=======
+									"left": 831,
+									"top": 528,
+>>>>>>> 44ce3dbb79afecd41bf0220260952bb60e98ccca
 									"width": 13.83154296875,
 									"height": 13,
 									"alpha": 0.9429188006291233,
@@ -5901,8 +5918,13 @@
 										"$ref": "AAAAAAF/KKePhenHEr4="
 									},
 									"font": "Arial;13;0",
+<<<<<<< HEAD
 									"left": 536,
 									"top": 483,
+=======
+									"left": 715,
+									"top": 446,
+>>>>>>> 44ce3dbb79afecd41bf0220260952bb60e98ccca
 									"width": 13.83154296875,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -6172,8 +6194,13 @@
 										"$ref": "AAAAAAF/KKe15epzws4="
 									},
 									"font": "Arial;13;0",
+<<<<<<< HEAD
 									"left": 882,
 									"top": 305,
+=======
+									"left": 887,
+									"top": 336,
+>>>>>>> 44ce3dbb79afecd41bf0220260952bb60e98ccca
 									"width": 13.83154296875,
 									"height": 13,
 									"alpha": 0.9161219870324404,
@@ -6509,8 +6536,13 @@
 										"$ref": "AAAAAAF/KKfP+esvt9k="
 									},
 									"font": "Arial;13;0",
+<<<<<<< HEAD
 									"left": 756,
 									"top": 278,
+=======
+									"left": 767,
+									"top": 319,
+>>>>>>> 44ce3dbb79afecd41bf0220260952bb60e98ccca
 									"width": 13.83154296875,
 									"height": 13,
 									"alpha": -0.5464621933313141,
@@ -7072,11 +7104,19 @@
 						},
 						{
 							"_type": "UMLAttribute",
+<<<<<<< HEAD
 							"_id": "AAAAAAF/LDQdp2PF7fA=",
 							"_parent": {
 								"$ref": "AAAAAAF/KES/eDNc5/8="
 							},
 							"name": "matricule",
+=======
+							"_id": "AAAAAAF/LDT1/YEeiAY=",
+							"_parent": {
+								"$ref": "AAAAAAF/KES/eDNc5/8="
+							},
+							"name": "Matricule",
+>>>>>>> 44ce3dbb79afecd41bf0220260952bb60e98ccca
 							"visibility": "private",
 							"type": "int"
 						}
