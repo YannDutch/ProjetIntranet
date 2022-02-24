@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "bRn5ecA/b7WHefHDCVUHXRMmzQU+YG5NIy2erHJaLXT69XXQAVTCr617BHSxRx/NiI2d8oi3OdR++UkOgV6d1A==",
+<<<<<<< HEAD
+  "dgSpecHash": "SMFc/qjdFvq8xg4tapyhC43tN/+LYh/bZgX0Ud5j5qAH0VvW/7GP94hX2Fvb1U7vVwAK8YT8Br6y9L8ilV3aoQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrateur\\Documents\\formtationDotNet\\StageM2i\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
+  "projectFilePath": "C:\\Users\\Administrateur\\Desktop\\Formation\\Projet Intranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
+=======
+  "dgSpecHash": "FZq7XyImVet3Zq5t1JQrEOZA9JKL2Jh8H50xvL47j5D1EP2BPX99PSQ2BAzscPfkOf5JINPtV/6GBRb3eInjsw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
+>>>>>>> 556b99b2980f9ff973701c7212337817062e60ec
   "expectedPackageFiles": [],
   "logs": []
 }
