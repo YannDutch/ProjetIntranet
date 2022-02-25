@@ -1,4 +1,4 @@
-﻿
+﻿--tables
 
 
 CREATE TABLE typeCollaborateurs(
