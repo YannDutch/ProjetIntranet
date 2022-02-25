@@ -1,6 +1,4 @@
-﻿Drop table typeCollaborateurs;
-Drop table services;
-Drop table collaborateurs;
+﻿--tables
 
 CREATE TABLE typeCollaborateurs(
 idTypeCollab int PRIMARY KEY IDENTITY(1,1),
