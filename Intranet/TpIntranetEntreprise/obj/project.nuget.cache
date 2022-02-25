@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bRn5ecA/b7WHefHDCVUHXRMmzQU+YG5NIy2erHJaLXT69XXQAVTCr617BHSxRx/NiI2d8oi3OdR++UkOgV6d1A==",
+  "dgSpecHash": "v/phNROZB9746lY0LJdbDGG9q+ch+NmYLg6BW0NNpWhKqXcEriEP6/R5OOR3Oro3MYSeo7hyuAH/MjHfimCmng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Administrateur\\Documents\\formtationDotNet\\StageM2i\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
+  "projectFilePath": "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetIntranetGitHub\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Users\\Administrateur\\Documents\\formtationDotNet\\StageM2i\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
