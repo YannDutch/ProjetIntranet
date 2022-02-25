@@ -39,6 +39,14 @@ IsActive bit not null,
 idService  int FOREIGN KEY REFERENCES servicesCollab(idService)
 );
 
+create table MissionsCollab(
+matriculeCollab int FOREIGN KEY REFERENCES collaborateurs(marticuleCollab),
+idMission int FOREIGN KEY REFERENCES Missions(idMission),
+dateDebut datetime not null,
+dateFin datetime null,
+nbDemiesJournees int null
+);
+
 Create Table NotesFrais(
 idNoteFrais int PRIMARY KEY IDENTITY(1,1),
 nomNoteFrais varchar(30) not null,
@@ -53,6 +61,12 @@ notifications varchar(max),
 SaisieTermine bit not null,
 MatriculeCollab int FOREIGN KEY REFERENCES collaborateurs(matriculeCollab),
 idMission int FOREIGN KEY REFERENCES Missions(idmission)
+);
+
+CREATE TABLE DetailsFrais(
+idDetailsFrais int not null,
+typeFrais varchar(50) not null,
+dateDepense datetime not null,
 );
 
 CREATE TABLE demandeAvance(
