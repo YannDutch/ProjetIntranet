@@ -23,7 +23,7 @@ namespace TpIntranetEntreprise.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult TeamCrisis()
         {
             return View();
         }

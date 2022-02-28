@@ -1,0 +1,129 @@
+﻿@using TpIntranetEntreprise.Models.Collaborateur
+@model Collaborateur
+@{
+    ViewData["Title"] = "Page Accueil Admin";
+}
+
+<div>
+    
+    <div class="text-center">
+
+        <h1 class="display-4">Espace Admin</h1>
+    </div>
+
+    <!--Bloc Espace-->
+
+    <div class="text-center">
+
+        <!--Espace Collaborateur-->
+        <div>
+            <h2>Collaborateur</h2>
+            <div>
+                <p> <a asp-area="" asp-controller="Collaborateur" asp-action="AjouterCollaborateur">Ajouter un collaborateur</a>
+            </div>
+            <div>
+                <p><a asp-area="" asp-controller="Collaborateur" asp-action="ConsulterCollaborateur">Consulter un collaborateur</a></p>
+            </div>
+            <div>
+                <p><a asp-area="" asp-controller="Mission" asp-action="SupprimerCollaborateur">Supprimer un collaborateur</a>
+            </div>
+        </div>
+
+        <!--Espace Mission-->
+        <div>
+            <h2>Mission</h2>
+
+            <div>
+                <p><a asp-area="" asp-controller="Mission" asp-action="AjouterMission">Ajouter une mission</a></p>
+            </div>
+
+            <div>
+                <p><a asp-area="" asp-controller="Mission" asp-action="ConsulterMission">Consulter une mission</a></p>
+            </div>
+
+            <div>
+                <p><a asp-area="" asp-controller="Mission" asp-action="SupprimerMission">Supprimer une mission</a>
+            </div>
+        </div>
+
+        <!--Espace Service-->
+        <div>
+            <h2>Service</h2>
+
+            <div>
+                <p><a asp-area="" asp-controller="Service" asp-action="AjouterService">Ajouter un service</a></p>
+            </div>
+
+            <div>
+                <p><a asp-area="" asp-controller="Service" asp-action="ConsulterService">Consulter un service</a></p>
+            </div>
+
+            <div>
+                <p><a asp-area="" asp-controller="Service" asp-action="SupprimerService">Supprimer un service</a></p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Rechercher-->
+    <div class="text-center">
+        <form>
+            <div class="row">
+                <input type="text" name="recherche" class="form-control col p-1" placeholder="Veuillez saisir le nom du collaborateur" />
+                <button class="col btn btn-dark" type="submit">Rechercher</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<h1 class="display-4">Annuaire</h1>
+
+    <div class="row">
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Prenom</th>
+                <th>Nom</th>
+                <th>Telephone</th>
+            </tr>
+-->
+@*         @foreach (Collaborateur c in Model)
+    {
+    <tr>
+    <td><div class="col">@c.Matricule</div></td>
+    <td><div class="col">@c.Nom</div></td>
+    <td><div class="col">@c.Prenom</div></td>
+    <td><div class="col">@c.Telephone</div></td>
+    <td><div class="col">@c.Email</div></td>
+    <td><div class="col"><a asp-controller="Contact" asp-action="Details" asp-route-id='@c.Matricule'>Détail</a></div></td>
+    <td><div class="col"><a asp-controller="Contact" asp-action="UpdateContact" asp-route-id='@c.Matricule'>Modifier</a></div></td>
+    <td><div class="col"><a asp-controller="Contact" asp-action="DeleteContact" asp-route-id='@c.Matricule'>Supprimer</a></div></td>
+    </tr>
+    }
+    </table>
+    </div>
+
+
+
+    </div>  *@

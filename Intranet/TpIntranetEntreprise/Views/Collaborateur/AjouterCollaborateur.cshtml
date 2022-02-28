@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Ajouter Collaborateur";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Ajouter un collaborateur</h1>
+
+<div>
+
+    <form enctype="multipart/form-data" asp-controller="Collaborateur" asp-action="SuccesAjout" method="post">
+        <div class="row m-1">
+            <input type="text" name="Nom" class="form-control col p-1" placeholder="Merci de saisir votre Nom" />
+        </div>
+        <div class="row m-1">
+            <input type="text" name="Prenom" class="form-control col p-1" placeholder="Merci de saisir votre prénom" />
+        </div>
+        <div class="row m-1">
+            <input type="text" name="Telephone" class="form-control col p-1" required placeholder="Merci de saisir votre téléphone" />
+        </div>
+        <div class="row m-1">
+            <input type="text" name="Email" class="form-control col p-1" required placeholder="Merci de saisir votre email" />
+        </div>
+        <div class="row m-1">
+            <button class="col btn btn-dark" type="submit">Valider</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

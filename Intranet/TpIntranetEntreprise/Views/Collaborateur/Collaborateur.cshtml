@@ -1,0 +1,50 @@
+﻿@using TpIntranetEntreprise.Models.Collaborateur
+@model Collaborateur
+@{
+    ViewData["Title"] = "Page Accueil Collaborateur";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Collaborateur</h1>
+    <p> <a asp-area="" asp-controller="Collaborateur" asp-action="AjouterCollaborateur">Ajouter un collaborateur</a>
+</div>
+
+
+<form>
+    <div class="row">
+        <input type="text" name="recherche" class="form-control col p-1" placeholder="Veuillez saisir le nom du collaborateur" />
+        <button class="col btn btn-dark" type="submit">Rechercher</button>
+    </div>
+</form>
+
+<!--
+<h1 class="display-4">Annuaire</h1>
+
+    <div class="row">
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Prenom</th>
+                <th>Nom</th>
+                <th>Telephone</th>
+            </tr>
+-->
+   @*         @foreach (Collaborateur c in Model)
+            {
+                <tr>
+                    <td><div class="col">@c.Matricule</div></td>
+                    <td><div class="col">@c.Nom</div></td>
+                    <td><div class="col">@c.Prenom</div></td>
+                    <td><div class="col">@c.Telephone</div></td>
+                    <td><div class="col">@c.Email</div></td>
+                    <td><div class="col"><a asp-controller="Contact" asp-action="Details" asp-route-id='@c.Matricule'>Détail</a></div></td>
+                    <td><div class="col"><a asp-controller="Contact" asp-action="UpdateContact" asp-route-id='@c.Matricule'>Modifier</a></div></td>
+                    <td><div class="col"><a asp-controller="Contact" asp-action="DeleteContact" asp-route-id='@c.Matricule'>Supprimer</a></div></td>
+                </tr>
+            }
+        </table>
+    </div>
+  
+    
+
+</div>  *@

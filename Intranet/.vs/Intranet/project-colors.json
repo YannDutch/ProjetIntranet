@@ -10,6 +10,11 @@
       "ProjectGuid": "4d80ff3b-1c7a-46d0-b96b-8ee6ea6acb0e",
       "DisplayName": "TpIntranetEntreprise",
       "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Fichiers divers",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 2

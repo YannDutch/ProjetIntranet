@@ -1,104 +1,114 @@
-<<<<<<< HEAD
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\appsettings.Development.json
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\appsettings.json
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.exe
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.deps.json
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.runtimeconfig.json
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.runtimeconfig.dev.json
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\ref\TpIntranetEntreprise.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.pdb
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.Views.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.Views.pdb
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.csproj.AssemblyReference.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.AssemblyInfoInputs.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.AssemblyInfo.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.csproj.CoreCompileInputs.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorAssemblyInfo.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorAssemblyInfo.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\scopedcss\bundle\TpIntranetEntreprise.styles.css
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\staticwebassets\TpIntranetEntreprise.StaticWebAssets.Manifest.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.TagHelpers.input.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.TagHelpers.output.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorCoreGenerate.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorTargetAssemblyInfo.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorTargetAssemblyInfo.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.Views.pdb
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\ref\TpIntranetEntreprise.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.pdb
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.genruntimeconfig.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.csproj.CopyComplete
-=======
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.csproj.AssemblyReference.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.AssemblyInfoInputs.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.AssemblyInfo.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.csproj.CoreCompileInputs.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorAssemblyInfo.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorAssemblyInfo.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\appsettings.Development.json
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\appsettings.json
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.exe
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.deps.json
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.runtimeconfig.json
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.runtimeconfig.dev.json
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\ref\TpIntranetEntreprise.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.pdb
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.Views.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.Views.pdb
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\Azure.Core.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\Azure.Identity.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\Microsoft.Identity.Client.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\Microsoft.Identity.Client.Extensions.Msal.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\System.Runtime.Caching.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\scopedcss\bundle\TpIntranetEntreprise.styles.css
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\staticwebassets\TpIntranetEntreprise.StaticWebAssets.Manifest.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.TagHelpers.input.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.TagHelpers.output.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorCoreGenerate.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorTargetAssemblyInfo.cache
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorTargetAssemblyInfo.cs
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.Views.pdb
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.csproj.CopyComplete
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\ref\TpIntranetEntreprise.dll
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.pdb
-C:\Users\Administrateur\Documents\Stage\ProjetIntranetGitHub\ProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.genruntimeconfig.cache
->>>>>>> cbdec61f4b99fa666c9ff0eccd752c987744c670
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\appsettings.json
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.exe
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.deps.json
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.runtimeconfig.json
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.runtimeconfig.dev.json
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.dll
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\ref\TpIntranetEntreprise.dll
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.pdb
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.Views.dll
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.Views.pdb
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.csproj.AssemblyReference.cache
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.AssemblyInfoInputs.cache
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.AssemblyInfo.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorAssemblyInfo.cache
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorAssemblyInfo.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\scopedcss\bundle\TpIntranetEntreprise.styles.css
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\staticwebassets\TpIntranetEntreprise.StaticWebAssets.Manifest.cache
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.TagHelpers.input.cache
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.TagHelpers.output.cache
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorCoreGenerate.cache
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorTargetAssemblyInfo.cache
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorTargetAssemblyInfo.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.Views.pdb
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.dll
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\ref\TpIntranetEntreprise.dll
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.pdb
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.genruntimeconfig.cache
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.csproj.CopyComplete
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Collaborateur\CollaborateurIndex.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\System.Data.SqlClient.dll
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Collaborateur\AjouterCollaborateur.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Collaborateur\SuccesAjout.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Service\ServiceIndex.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Mission\MissionIndex.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Mission\AjouterMission.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Mission\SuccesAjout.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Service\AjouterService.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Home\TeamCrisis.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Mission\ConsulterMission.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Collaborateur\Collaborateur.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Collaborateur\Admin.cshtml.g.cs
+C:\Users\Administrateur\Desktop\MonProjetIntranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Mission\SupprimerMission.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\appsettings.json
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.exe
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.deps.json
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.runtimeconfig.json
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.runtimeconfig.dev.json
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.dll
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\ref\TpIntranetEntreprise.dll
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.pdb
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.Views.dll
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\TpIntranetEntreprise.Views.pdb
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\System.Data.SqlClient.dll
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.csproj.AssemblyReference.cache
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.AssemblyInfoInputs.cache
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.AssemblyInfo.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.csproj.CoreCompileInputs.cache
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorAssemblyInfo.cache
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorAssemblyInfo.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\scopedcss\bundle\TpIntranetEntreprise.styles.css
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\staticwebassets\TpIntranetEntreprise.StaticWebAssets.Manifest.cache
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.TagHelpers.input.cache
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.TagHelpers.output.cache
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorCoreGenerate.cache
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Collaborateur\Admin.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Collaborateur\AjouterCollaborateur.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Collaborateur\Collaborateur.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Collaborateur\CollaborateurIndex.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Collaborateur\SuccesAjout.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Home\TeamCrisis.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Mission\AjouterMission.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Mission\ConsulterMission.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Mission\MissionIndex.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Mission\SuccesAjout.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Mission\SupprimerMission.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Service\AjouterService.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Service\ServiceIndex.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorTargetAssemblyInfo.cache
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.RazorTargetAssemblyInfo.cs
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.Views.pdb
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.csproj.CopyComplete
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.dll
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\ref\TpIntranetEntreprise.dll
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.pdb
+C:\Users\Administrateur\Desktop\Formation\Projet Intranet\Intranet\TpIntranetEntreprise\obj\Debug\net5.0\TpIntranetEntreprise.genruntimeconfig.cache

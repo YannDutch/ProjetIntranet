@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Page Accueil Mission";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Mission</h1>
+    <p> <a asp-area="" asp-controller="Mission" asp-action="AjouterMission">Ajouter une mission</a>
+</div>
+
+<div class="text-center">
+
+    <p> <a asp-area="" asp-controller="Mission" asp-action="ConsulterMission">Consulter une mission</a>
+</div>
+
+<form>
+    <div class="row">
+        <input type="text" name="recherche" class="form-control col p-1" placeholder="Veuillez saisir l'id de la mission'" />
+        <button class="col btn btn-dark" type="submit">Rechercher</button>
+    </div>
+</form>

@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Page Accueil Service";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Service</h1>
+    <p> <a asp-area="" asp-controller="Service" asp-action="AjouterService">Ajouter un service</a>
+</div>
+
+<form>
+    <div class="row">
+        <input type="text" name="recherche" class="form-control col p-1" placeholder="Veuillez saisir le nom du service recherché" />
+        <button class="col btn btn-dark" type="submit">Rechercher</button>
+    </div>
+</form>

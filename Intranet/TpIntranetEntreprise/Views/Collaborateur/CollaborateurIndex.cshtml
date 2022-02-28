@@ -1,0 +1,45 @@
+﻿<div class="text-center">
+    <h1 class="display-4">INTRANET</h1>
+    <p><a>Accueil</a></p>
+</div>
+
+
+
+<div>
+    <h2 class="text-center">Se connecter</h2>
+    <form enctype="multipart/form-data" asp-controller="Collaborateur" asp-action="Collaborateur" method="post">
+        
+        <div class="row m-1">
+            <input type="text" name="Nom" class="form-control col p-1" required placeholder="Merci de saisir votre Nom" />
+        </div>
+        <div class="row m-1">
+            <input type="text" name="Prenom" class="form-control col p-1" required placeholder="Merci de saisir votre Prénom" />
+        </div>
+        <div class="row m-1">
+            <input type="text" name="MdP" class="form-control col p-1" required placeholder="Merci de saisir votre mot de passe" />
+        </div>
+        <div class="row m-1">
+            <button class="col btn btn-dark" type="submit">Connexion</button>
+        </div>
+    </form>
+</div>
+<div>
+
+    <h2 class="text-center">Rejoindre l'intranet</h2>
+
+    <form enctype="multipart/form-data" asp-controller="Collaborateur" asp-action="Collaborateur" method="post">
+        
+        <div class="row m-1">
+            <input type="text" name="Email" class="form-control col p-1" required placeholder="Merci de saisir votre adresse mail" />
+        </div>
+        <div class="row m-1">
+            <input type="text" name="Prenom" class="form-control col p-1" required placeholder="Merci de saisir votre Mot de Passe" />
+        </div>
+        <div class="row m-1">
+            <input type="text" name="MdP" class="form-control col p-1" required placeholder="Merci de confirmer votre mot de passe" />
+        </div>
+        <div class="row m-1">
+            <button class="col btn btn-dark" type="submit">Connexion</button>
+        </div>
+    </form>
+</div>

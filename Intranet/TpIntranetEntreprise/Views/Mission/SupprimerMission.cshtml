@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Supprimer une misson";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Supprimer une mission</h1>
+
+<div>
+
+    <form enctype="multipart/form-data" asp-controller="Mission" asp-action="SuccesAjout" method="post">
+        <div class="row m-1">
+            <input type="text" name="Nom" class="form-control col p-1" placeholder="Donnez un nom à la mission" />
+        </div>
+        <div class="row m-1">
+            <input type="text" name="Prenom" class="form-control col p-1" placeholder="Merci de saisir la durée de la mission" />
+        </div>
+        <div class="row m-1">
+            <input type="text" name="Telephone" class="form-control col p-1" required placeholder="Indiquez les collaborateurs de la mission" />
+        </div>
+        <div class="row m-1">
+            <button class="col btn btn-dark" asp-controller="Mission" asp-action="SuccesAjout" type="submit">Valider</button>
+        </div>
+    </form>
+</div>
