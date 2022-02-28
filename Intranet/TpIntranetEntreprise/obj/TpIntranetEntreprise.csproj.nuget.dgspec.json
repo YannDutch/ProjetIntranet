@@ -1,7 +1,11 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Administrateur\\Desktop\\Formation\\Projet Intranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj": {}
+=======
+    "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetIntranetGitHub\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj": {}
+>>>>>>> 96a9047b8426d73b40f90df3fdb731f01e4a43c9
   },
   "projects": {
     "C:\\Users\\Administrateur\\Desktop\\Formation\\Projet Intranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj": {
@@ -11,7 +15,11 @@
         "projectName": "TpIntranetEntreprise",
         "projectPath": "C:\\Users\\Administrateur\\Desktop\\Formation\\Projet Intranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
         "packagesPath": "C:\\Users\\Administrateur\\.nuget\\packages\\",
+<<<<<<< HEAD
         "outputPath": "C:\\Users\\Administrateur\\Desktop\\Formation\\Projet Intranet\\Intranet\\TpIntranetEntreprise\\obj\\",
+=======
+        "outputPath": "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetIntranetGitHub\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\obj\\",
+>>>>>>> 96a9047b8426d73b40f90df3fdb731f01e4a43c9
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrateur\\AppData\\Roaming\\NuGet\\NuGet.Config",

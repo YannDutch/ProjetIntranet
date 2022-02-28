@@ -2319,11 +2319,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Administrateur\\Desktop\\Formation\\Projet Intranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
+=======
+      "projectUniqueName": "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetIntranetGitHub\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
+>>>>>>> 96a9047b8426d73b40f90df3fdb731f01e4a43c9
       "projectName": "TpIntranetEntreprise",
       "projectPath": "C:\\Users\\Administrateur\\Desktop\\Formation\\Projet Intranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
       "packagesPath": "C:\\Users\\Administrateur\\.nuget\\packages\\",
+<<<<<<< HEAD
       "outputPath": "C:\\Users\\Administrateur\\Desktop\\Formation\\Projet Intranet\\Intranet\\TpIntranetEntreprise\\obj\\",
+=======
+      "outputPath": "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetIntranetGitHub\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\obj\\",
+>>>>>>> 96a9047b8426d73b40f90df3fdb731f01e4a43c9
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2384,7 +2392,11 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Problème de lecture du fichier cache C:\\Users\\Administrateur\\Desktop\\Formation\\Projet Intranet\\Intranet\\TpIntranetEntreprise\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+=======
+      "message": "Problème de lecture du fichier cache C:\\Users\\Administrateur\\Documents\\Stage\\ProjetIntranetGitHub\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+>>>>>>> 96a9047b8426d73b40f90df3fdb731f01e4a43c9
     }
   ]
 }
