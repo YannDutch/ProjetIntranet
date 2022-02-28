@@ -2319,19 +2319,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetIntranetGitHub\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
+      "projectUniqueName": "C:\\Users\\Administrateur\\Desktop\\Formation\\Projet Intranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
       "projectName": "TpIntranetEntreprise",
-      "projectPath": "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetIntranetGitHub\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
+      "projectPath": "C:\\Users\\Administrateur\\Desktop\\Formation\\Projet Intranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
       "packagesPath": "C:\\Users\\Administrateur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetIntranetGitHub\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
-      "projectName": "TpIntranetEntreprise",
-      "projectPath": "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
-      "packagesPath": "C:\\Users\\Administrateur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\obj\\",
->>>>>>> 7ea31292f3bfd4178dc67c0a638e0b98d1be337f
+      "outputPath": "C:\\Users\\Administrateur\\Desktop\\Formation\\Projet Intranet\\Intranet\\TpIntranetEntreprise\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2383,7 +2375,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -2392,7 +2384,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problème de lecture du fichier cache C:\\Users\\Administrateur\\Documents\\Stage\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problème de lecture du fichier cache C:\\Users\\Administrateur\\Desktop\\Formation\\Projet Intranet\\Intranet\\TpIntranetEntreprise\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }
