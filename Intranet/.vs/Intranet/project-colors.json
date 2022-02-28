@@ -10,7 +10,12 @@
       "ProjectGuid": "4d80ff3b-1c7a-46d0-b96b-8ee6ea6acb0e",
       "DisplayName": "TpIntranetEntreprise",
       "ColorIndex": 1
+    },
+    "19351cdc-bb5c-4707-a734-416305036405": {
+      "ProjectGuid": "19351cdc-bb5c-4707-a734-416305036405",
+      "DisplayName": "TpIntranetEntreprise",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }
