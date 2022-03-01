@@ -14,14 +14,14 @@ namespace TpIntranetEntreprise.DAO
 
 
 
-        public abstract bool AjouterCollaborateur(T element);
+        public abstract bool Ajouter(T element);
 
         public abstract bool Delete(T element);
 
         public abstract bool Update(T element);
 
         public abstract T Find(string nom);
-        public abstract List<T> Find(Func<T,bool> criteria);
+        public abstract List<T> Find(Func<T, bool> criteria);
 
         public abstract List<T> FindAll();
     }

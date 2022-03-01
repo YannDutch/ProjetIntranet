@@ -10,21 +10,21 @@ namespace TpIntranetEntreprise.DAO
 {
     class CollaborateurDAO : BaseDAO<Collaborateur>
     {
-        public override bool AjouterCollaborateur(Collaborateur element)
+        public override bool Ajouter(Collaborateur element)
         {
-            request = "INSERT INTO collaborateurs (nom, prenom, telephone, Email) " +
-                "OUTPUT INSERTED.ID VALUES (@nom, @prenom, @telephone, @Email)";
+            request = "INSERT INTO collaborateurs (nom, prenom, dateNaissance, MDP) " +
+                "OUTPUT INSERTED.ID VALUES (@nom, @prenom, @dateNaissance, @MDP)";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nom", element.Nom));
             command.Parameters.Add(new SqlParameter("@prenom", element.Prenom));
-            command.Parameters.Add(new SqlParameter("@telephone", element.Telephone));
-            command.Parameters.Add(new SqlParameter("@email", element.Email));
+            command.Parameters.Add(new SqlParameter("@dateNaissance", element.DateNaissance));
+            command.Parameters.Add(new SqlParameter("@MDP", element.MDP1));
             connection.Open();
-            element.Matricule = (int)command.ExecuteScalar();
+            element.MatriculeCollab = (int)command.ExecuteScalar();
             command.Dispose();
             connection.Close();
-            return element.Matricule > 0;
+            return element.MatriculeCollab > 0;
         }
 
         public override bool Delete(Collaborateur element)
@@ -32,7 +32,7 @@ namespace TpIntranetEntreprise.DAO
             request = "DELETE FROM collaborateurs WHERE matricule=@matricule";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
-            command.Parameters.Add(new SqlParameter("@matricule", element.Matricule));
+            command.Parameters.Add(new SqlParameter("@matricule", element.MatriculeCollab));
             connection.Open();
             int nbrLigne = command.ExecuteNonQuery();
             command.Dispose();
@@ -42,14 +42,14 @@ namespace TpIntranetEntreprise.DAO
 
         public override bool Update(Collaborateur element)
         {
-            request = "UPDATE collaborateur SET nom = @nom, prenom = @prenom, telephone = telephone, email = @email, WHERE matricule = @matricule";
+            request = "UPDATE collaborateurs SET nom = @nom, prenom = @prenom, dateNaissance = @dateNaissance, MDP = @MDP, WHERE matriculeCollab = @matriculeCollab";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nom", element.Nom));
             command.Parameters.Add(new SqlParameter("@prenom", element.Prenom));
-            command.Parameters.Add(new SqlParameter("@telephone", element.Telephone));
-            command.Parameters.Add(new SqlParameter("@email", element.Email));
-            command.Parameters.Add(new SqlParameter("@matricule", element.Matricule));
+            command.Parameters.Add(new SqlParameter("@dateNaissance", element.DateNaissance));
+            command.Parameters.Add(new SqlParameter("@MDP", element.MDP1));
+            command.Parameters.Add(new SqlParameter("@matriculeCollab", element.MatriculeCollab));
             connection.Open();
             int nbRow = command.ExecuteNonQuery();
             command.Dispose();
@@ -60,7 +60,7 @@ namespace TpIntranetEntreprise.DAO
         public override Collaborateur Find(string nom)
         {
             Collaborateur collaborateur = null;
-            request = "SELECT matricule, nom, prenom, telephone, email FROM collaborateurs WHERE nom=@nom";
+            request = "SELECT matriculeCollab, nom, prenom, dateNaissance, MDP FROM collaborateurs WHERE nom=@nom";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nom", nom));
@@ -70,11 +70,11 @@ namespace TpIntranetEntreprise.DAO
             {
                 collaborateur = new Collaborateur
                 {
-                    Matricule = reader.GetInt32(0),
+                    MatriculeCollab = reader.GetInt32(0),
                     Nom = nom,
                     Prenom = reader.GetString(2),
-                    Telephone = reader.GetString(3),
-                    Email = reader.GetString(4),
+                    DateNaissance = reader.GetString(3),
+                    MDP1 = reader.GetString(4),
                 };
             }
             reader.Close();
@@ -100,7 +100,7 @@ namespace TpIntranetEntreprise.DAO
         public override List<Collaborateur> FindAll()
         {
             List<Collaborateur> collaborateurs = new List<Collaborateur>();
-            request = "SELECT matricule, nom, prenom, telephone, email FROM collaborateurs";
+            request = "SELECT matriculeCollab, nom, prenom, dateNaissance, MDP FROM collaborateurs";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             connection.Open();
@@ -109,11 +109,11 @@ namespace TpIntranetEntreprise.DAO
             {
                 Collaborateur c = new Collaborateur
                 {
-                    Matricule = reader.GetInt32(0),
+                    MatriculeCollab = reader.GetInt32(0),
                     Nom = reader.GetString(1),
                     Prenom = reader.GetString(2),
-                    Telephone = reader.GetString(3),
-                    Email = reader.GetString(4),                   
+                    DateNaissance = reader.GetString(3),
+                    MDP1 = reader.GetString(4),
                 };
                 collaborateurs.Add(c);
             }

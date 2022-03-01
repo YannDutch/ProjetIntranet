@@ -8,58 +8,42 @@ namespace TpIntranetEntreprise.Models.Collaborateur
 {
     public class Collaborateur
     {
-        private int matricule;
+        private int matriculeCollab = 0;
         private string nom;
         private string prenom;
-        private string telephone;
-        private string email;
-        private string IdService;
-        public static List<Collaborateur> Liste = new List<Collaborateur> { new Collaborateur() { Nom = "Yannick", Prenom = "Prenom", Telephone = "+33 7 86 05 00 32", Email = "yannick.hourdiau@gmail.com" } };
-
-
-
+        private string dateNaissance;
+        private string MDP;
         public Collaborateur()
         {
-
-
+            matriculeCollab++;
         }
 
-        public Collaborateur(int matricule, string nom, string prenom, string telephone, string email)
+        public Collaborateur(string nom, string prenom, string dateNaissance, string MDP) : this()
         {
-
+            Nom = nom;
+            Prenom = prenom;
+            DateNaissance = dateNaissance;
+            MDP1 = MDP;
         }
 
-
-
-        public Collaborateur(string nom, string prenom, string telephone, string email)
-        {
-            this.nom = nom;
-            this.prenom = prenom;
-            this.telephone = telephone;
-            this.email = email;
-
-        }
-
-        public int Matricule { get => matricule; set => matricule = value; }
+        public int MatriculeCollab { get => matriculeCollab; set => matriculeCollab = value; }
         public string Nom { get => nom; set => nom = value; }
         public string Prenom { get => prenom; set => prenom = value; }
-        public string Telephone { get => telephone; set => telephone = value; }
-        public string Email { get => email; set => email = value; }
-        public string IdService1 { get => IdService; set => IdService = value; }
-
-
-      
+        public string DateNaissance { get => dateNaissance; set => dateNaissance = value; }
+        public string MDP1 { get => MDP; set => MDP = value; }
 
 
 
-        
 
 
- //       public List<Collaborateur> Find(Func<Collaborateur, bool> criteria)
-  //      {
-  //          BaseDAO<Collaborateur> dao = new List<Collaborateur>
-  //          return dao.Find(criteria);
-   //     }
+
+
+
+        //       public List<Collaborateur> Find(Func<Collaborateur, bool> criteria)
+        //      {
+        //          BaseDAO<Collaborateur> dao = new List<Collaborateur>
+        //          return dao.Find(criteria);
+        //     }
 
 
 
@@ -67,9 +51,9 @@ namespace TpIntranetEntreprise.Models.Collaborateur
         public bool Save()
         {
             BaseDAO<Collaborateur> dao = new CollaborateurDAO();
-            return dao.AjouterCollaborateur(this);
+            return dao.Ajouter(this);
         }
     }
 
-    
+
 }

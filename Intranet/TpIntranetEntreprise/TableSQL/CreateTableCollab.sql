@@ -10,8 +10,8 @@ drop table servicesCollab
 drop table typeCollaborateurs
 
 CREATE TABLE typeCollaborateurs(
-idTypeCollab int PRIMARY KEY IDENTITY(1,1),
-nomTypeCollab varchar(100) not null
+idTypeCollab int IDENTITY(1,1) not null,
+nomTypeCollab varchar(100) PRIMARY KEY not null
 );
 
 CREATE TABLE servicesCollab(
@@ -25,7 +25,7 @@ nom varchar(100) not null,
 prenom varchar(100) not null,
 dateNaissance datetime not null,
 MDP VARCHAR (20) not null,
-idTypeCollab int FOREIGN KEY REFERENCES typeCollaborateurs(idTypeCollab)
+nomTypeCollab varchar(100) FOREIGN KEY REFERENCES typeCollaborateurs(nomTypeCollab) null
 );
 
 CREATE TABLE servicesHistoriques(
@@ -40,7 +40,7 @@ Create Table missions(
 idMission int PRIMARY KEY IDENTITY(1,1),
 nomMission varchar(50) not null,
 dateCreation datetime null,
-descriptions varchar(max) null,
+contenu varchar(max) null,
 dateDebut datetime null,
 dateFin datetime null,
 isActive bit not null,
