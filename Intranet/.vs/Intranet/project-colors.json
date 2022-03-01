@@ -1,34 +1,16 @@
 {
   "Version": 1,
   "ProjectMap": {
-<<<<<<< HEAD
-    "9067f18e-4889-498b-870a-0a5a344fea6b": {
-      "ProjectGuid": "9067f18e-4889-498b-870a-0a5a344fea6b",
-      "DisplayName": "Intranet",
-      "ColorIndex": 0
-    },
-    "4d80ff3b-1c7a-46d0-b96b-8ee6ea6acb0e": {
-      "ProjectGuid": "4d80ff3b-1c7a-46d0-b96b-8ee6ea6acb0e",
-      "DisplayName": "TpIntranetEntreprise",
-      "ColorIndex": 1
-    },
-<<<<<<< HEAD
-=======
->>>>>>> YoannWork
     "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Fichiers divers",
       "ColorIndex": -1
-<<<<<<< HEAD
-=======
+    },
     "19351cdc-bb5c-4707-a734-416305036405": {
       "ProjectGuid": "19351cdc-bb5c-4707-a734-416305036405",
       "DisplayName": "TpIntranetEntreprise",
-      "ColorIndex": 2
->>>>>>> c707e2c21282ed018ecbbbb8f96e9c97a669aa64
-=======
->>>>>>> YoannWork
+      "ColorIndex": 0
     }
   },
-  "NextColorIndex": 0
+  "NextColorIndex": 1
 }

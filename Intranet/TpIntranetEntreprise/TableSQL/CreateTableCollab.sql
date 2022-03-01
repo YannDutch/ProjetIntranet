@@ -40,7 +40,7 @@ Create Table missions(
 idMission int PRIMARY KEY IDENTITY(1,1),
 nomMission varchar(50) not null,
 dateCreation datetime null,
-contenu varchar(max) null,
+descriptions varchar(max) null,
 dateDebut datetime null,
 dateFin datetime null,
 isActive bit not null,
