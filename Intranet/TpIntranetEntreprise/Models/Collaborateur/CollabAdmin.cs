@@ -2,7 +2,7 @@
 
 namespace TpIntranetEntreprise.Models.Collaborateur
 {
-    public class CollabAdmin : Collaborateur
+    public class CollabAdmin :Collaborateur
     {
         private string nomTypeCollab;
 

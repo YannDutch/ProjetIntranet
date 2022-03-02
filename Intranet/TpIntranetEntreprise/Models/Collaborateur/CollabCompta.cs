@@ -6,7 +6,7 @@ using TpIntranetEntreprise.Tools;
 
 namespace TpIntranetEntreprise.Models.Collaborateur
 {
-    public class CollabCompta : Collaborateur
+    public class CollabCompta :Collaborateur
     {
         private string nomTypeCollab;
 
@@ -15,7 +15,7 @@ namespace TpIntranetEntreprise.Models.Collaborateur
 
         }
 
-        public CollabCompta(string nomTypeCollab) : base()
+        public CollabCompta(string nomTypeCollab):base()
         {
             NomTypeCollab = nomTypeCollab;
         }

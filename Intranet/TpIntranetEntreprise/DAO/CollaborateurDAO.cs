@@ -73,7 +73,7 @@ namespace TpIntranetEntreprise.DAO
                     MatriculeCollab = reader.GetInt32(0),
                     Nom = nom,
                     Prenom = reader.GetString(2),
-                    DateNaissance = reader.GetString(3),
+                    DateNaissance= reader.GetString(3),
                     MDP1 = reader.GetString(4),
                 };
             }
@@ -113,7 +113,7 @@ namespace TpIntranetEntreprise.DAO
                     Nom = reader.GetString(1),
                     Prenom = reader.GetString(2),
                     DateNaissance = reader.GetString(3),
-                    MDP1 = reader.GetString(4),
+                    MDP1 = reader.GetString(4),                   
                 };
                 collaborateurs.Add(c);
             }

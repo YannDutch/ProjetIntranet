@@ -12,27 +12,22 @@ namespace TpIntranetEntreprise.DAO
     {
         public override bool Ajouter(Mission element)
         {
-            if (element.IsActive == true)
-            {
-                connection = Connection.New;
-                request = "INSERT into missions (idMission, nomMission, dateCreation, descriptions, dateDebut,dateFin,idService) " +
-                    "OUTPUT INSERTED.ID values(@idMission, @nomMission, @dateCreation, @descriptions,@dateDebut,@dateFin,@idService)";
-                command = new SqlCommand(request, connection);
-                command.Parameters.Add(new SqlParameter("@idMission", element.IdMission));
-                command.Parameters.Add(new SqlParameter("@nomMission", element.NomMission));
-                command.Parameters.Add(new SqlParameter("@dateCreation", element.DateCreation));
-                command.Parameters.Add(new SqlParameter("@descriptions", element.Descriptions));
-                command.Parameters.Add(new SqlParameter("@dateDebut", element.DateDebut));
-                command.Parameters.Add(new SqlParameter("@dateFin", element.DateFin));
-                command.Parameters.Add(new SqlParameter("@idService", element.IdService));
-                connection.Open();
-                element.IdMission = (int)command.ExecuteScalar();
-                command.Dispose();
-                connection.Close();
-                return element.IdMission > 0;
-            }
-            else
-                return false;
+            connection = Connection.New;
+            request = "INSERT into missions (idMission, nomMission, dateCreation, descriptions, dateDebut,dateFin,idService) " +
+                "OUTPUT INSERTED.ID values(@idMission, @nomMission, @dateCreation, @descriptions,@dateDebut,@dateFin,@idService)";
+            command = new SqlCommand(request, connection);
+            command.Parameters.Add(new SqlParameter("@idMission", element.IdMission));
+            command.Parameters.Add(new SqlParameter("@nomMission", element.NomMission));
+            command.Parameters.Add(new SqlParameter("@dateCreation", element.DateCreation));
+            command.Parameters.Add(new SqlParameter("@descriptions", element.Descriptions));
+            command.Parameters.Add(new SqlParameter("@dateDebut", element.DateDebut));
+            command.Parameters.Add(new SqlParameter("@dateFin", element.DateFin));
+            command.Parameters.Add(new SqlParameter("@idService", element.IdService));
+            connection.Open();
+            element.IdMission = (int)command.ExecuteScalar();
+            command.Dispose();
+            connection.Close();
+            return element.IdMission > 0;
         }
 
         public override bool Delete(Mission element)

@@ -8,7 +8,7 @@ namespace TpIntranetEntreprise.Models.Collaborateur
 {
     public class Collaborateur
     {
-        private int matriculeCollab = 0;
+        private int matriculeCollab=0;
         private string nom;
         private string prenom;
         private string dateNaissance;
@@ -18,7 +18,7 @@ namespace TpIntranetEntreprise.Models.Collaborateur
             matriculeCollab++;
         }
 
-        public Collaborateur(string nom, string prenom, string dateNaissance, string MDP) : this()
+        public Collaborateur(string nom, string prenom, string dateNaissance, string MDP):this()
         {
             Nom = nom;
             Prenom = prenom;
@@ -55,5 +55,5 @@ namespace TpIntranetEntreprise.Models.Collaborateur
         }
     }
 
-
+    
 }

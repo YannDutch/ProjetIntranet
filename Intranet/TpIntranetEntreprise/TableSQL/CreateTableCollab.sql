@@ -1,22 +1,22 @@
-﻿drop table servicesHistoriques
-drop table demandeConges
-drop table demandeAvance
-drop table detailsFrais
-drop table notesFrais
-drop table missionsCollab
-drop table missions
-drop table collaborateurs
-drop table servicesCollab
-drop table typeCollaborateurs
+﻿drop table if exists servicesHistoriques;
+drop table if exists demandeConges;
+drop table if exists demandeAvance;
+drop table if exists detailsFrais;
+drop table if exists notesFrais;
+drop table if exists missionsCollab;
+drop table if exists missions;
+drop table if exists collaborateurs;
+drop table if exists servicesCollab;
+drop table if exists typeCollaborateurs;
 
 CREATE TABLE typeCollaborateurs(
-idTypeCollab int IDENTITY(1,1) not null,
-nomTypeCollab varchar(100) PRIMARY KEY not null
+idTypeCollab int identity(1,1),
+nomTypeCollab varchar(100)  PRIMARY KEY not null
 );
 
 CREATE TABLE servicesCollab(
 idService int PRIMARY KEY IDENTITY(1,1),
-nomService varchar(100) not null
+nomService varchar (100) not null
 );
 
 CREATE TABLE collaborateurs(
@@ -25,22 +25,23 @@ nom varchar(100) not null,
 prenom varchar(100) not null,
 dateNaissance datetime not null,
 MDP VARCHAR (20) not null,
-nomTypeCollab varchar(100) FOREIGN KEY REFERENCES typeCollaborateurs(nomTypeCollab) null
+idService int FOREIGN KEY REFERENCES servicesCollab(idService) null ,
+nomTypeCollab varchar(100) FOREIGN KEY REFERENCES typeCollaborateurs(nomTypeCollab) null,
 );
 
 CREATE TABLE servicesHistoriques(
 idServiceHistorique int PRIMARY KEY IDENTITY(1,1),
 dateDebut datetime not null,
 dateFin datetime null,
-matricule int FOREIGN KEY REFERENCES collaborateurs(matriculeCollab),
-idService int FOREIGN KEY REFERENCES servicesCollab(idService)
+matriculeCollab int FOREIGN KEY REFERENCES collaborateurs(matriculeCollab),
+idService int FOREIGN KEY REFERENCES servicesCollab(idService),
 );
 
 Create Table missions(
 idMission int PRIMARY KEY IDENTITY(1,1),
 nomMission varchar(50) not null,
 dateCreation datetime null,
-contenu varchar(max) null,
+descriptions varchar(max) null,
 dateDebut datetime null,
 dateFin datetime null,
 isActive bit not null,
@@ -81,12 +82,13 @@ idNoteFrais int foreign key references notesFrais(idNoteFrais)
 );
 
 create table demandeAvance(
-valideN1 bit not null,
-valideN2 bit not null,
+valideN1 bit null,
+valideN2 bit null,
 dateDemande datetime null,
 notifications varchar(max),
+etat bit null,
 matriculeCollab int foreign key references collaborateurs(matriculeCollab),
-idMission int foreign key references missions(idMission),
+nomMission varchar(50) not null foreign key references missions(nomMission),
 lienNoteFrais varchar(max)
 );
 
@@ -94,7 +96,9 @@ create table demandeConges(
 valideN1 bit not null,
 valideN2 bit not null,
 dateConges datetime not null,
+etat bit null,
 dateDemande datetime not null,
+nom varchar(100) foreign key references collaborateurs(nom),
 notifications varchar(max),
 matriculeCollab int foreign key references collaborateurs(matriculeCollab),
 );

@@ -20,12 +20,12 @@ namespace TpIntranetEntreprise.DAO
             command.Parameters.Add(new SqlParameter("@prenom", element.Prenom));
             command.Parameters.Add(new SqlParameter("@dateNaissance", element.DateNaissance));
             command.Parameters.Add(new SqlParameter("@MDP", element.MDP1));
-            command.Parameters.Add(new SqlParameter("@nomTypeCollab", element.NomTypeCollab)); ;
+            command.Parameters.Add(new SqlParameter("@nomTypeCollab", element.NomTypeCollab));;
             connection.Open();
             element.MatriculeCollab = (int)command.ExecuteScalar();
             command.Dispose();
             connection.Close();
-            return element.MatriculeCollab > 0;
+            return element.MatriculeCollab>0;
         }
 
         public override bool Delete(CollabCompta element)
@@ -95,7 +95,7 @@ namespace TpIntranetEntreprise.DAO
                     MatriculeCollab = reader.GetInt32(0),
                     Nom = reader.GetString(1),
                     Prenom = reader.GetString(2),
-                    DateNaissance = reader.GetString(3),
+                    DateNaissance= reader.GetString(3),
                     MDP1 = reader.GetString(4),
                     NomTypeCollab = reader.GetString(5),
                 };
