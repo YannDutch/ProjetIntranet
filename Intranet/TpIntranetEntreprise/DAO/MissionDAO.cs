@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
-using TpIntranetEntreprise.Models.Collaborateur;
+using TpIntranetEntreprise.Models.Action;
 
 namespace TpIntranetEntreprise.DAO
 {
@@ -13,16 +13,16 @@ namespace TpIntranetEntreprise.DAO
         public override bool Ajouter(Mission element)
         {
             connection = Connection.New;
-            request = "INSERT into missions (idMission, nomMission, dateCreation, descriptions, dateDebut,dateFin,idService) " +
-                "OUTPUT INSERTED.ID values(@idMission, @nomMission, @dateCreation, @descriptions,@dateDebut,@dateFin,@idService)";
+            request = "INSERT into missions ( nomMission, dateCreation, descriptions, dateDebut,dateFin,etat,idServicePersonne) " +
+                "OUTPUT INSERTED.ID values( @nomMission, @dateCreation, @descriptions,@dateDebut,@dateFin,@etat,@idServicePersonne)";
             command = new SqlCommand(request, connection);
-            command.Parameters.Add(new SqlParameter("@idMission", element.IdMission));
             command.Parameters.Add(new SqlParameter("@nomMission", element.NomMission));
             command.Parameters.Add(new SqlParameter("@dateCreation", element.DateCreation));
             command.Parameters.Add(new SqlParameter("@descriptions", element.Descriptions));
             command.Parameters.Add(new SqlParameter("@dateDebut", element.DateDebut));
             command.Parameters.Add(new SqlParameter("@dateFin", element.DateFin));
-            command.Parameters.Add(new SqlParameter("@idService", element.IdService));
+            command.Parameters.Add(new SqlParameter("@etat", element.Etat));
+            command.Parameters.Add(new SqlParameter("@idServicePersonne", element.IdService));
             connection.Open();
             element.IdMission = (int)command.ExecuteScalar();
             command.Dispose();
@@ -46,7 +46,7 @@ namespace TpIntranetEntreprise.DAO
         public override Mission Find(string nomMission)
         {
             Mission mission = null;
-            request = "SELECT nomMission, dateCreation, descriptions,dateDebut, dateFin,idService FROM missions WHERE idMission=@idMission";
+            request = "SELECT nomMission, dateCreation, descriptions,dateDebut, dateFin,etat,idServicePersonne FROM missions WHERE idMission=@idMission";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nomMission", nomMission));
@@ -61,7 +61,8 @@ namespace TpIntranetEntreprise.DAO
                     Descriptions = reader.GetString(2),
                     DateDebut = (DateTime)reader.GetSqlDateTime(3),
                     DateFin = (DateTime)reader.GetSqlDateTime(4),
-                    IdService = (int)reader.GetSqlInt64(5),
+                    Etat= reader.GetBoolean(5),
+                    IdService = (int)reader.GetSqlInt64(6),
                 };
             }
             reader.Close();
@@ -86,7 +87,7 @@ namespace TpIntranetEntreprise.DAO
         public override List<Mission> FindAll()
         {
             List<Mission> missions = new List<Mission>();
-            request = "SELECT idMission, nomMission, dateCreation, descriptions,dateDebut, dateFin,idService FROM missions";
+            request = "SELECT idMission, nomMission, dateCreation, descriptions,dateDebut, dateFin,etat,idServicePersonne FROM missions";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             connection.Open();
@@ -101,7 +102,8 @@ namespace TpIntranetEntreprise.DAO
                     Descriptions = reader.GetString(3),
                     DateDebut = (DateTime)reader.GetSqlDateTime(4),
                     DateFin = (DateTime)reader.GetSqlDateTime(5),
-                    IdService = reader.GetInt32(6),
+                    Etat =reader.GetBoolean(6),
+                    IdService = reader.GetInt32(7),
                 };
                 missions.Add(c);
             }
@@ -111,9 +113,15 @@ namespace TpIntranetEntreprise.DAO
             return missions;
         }
 
+        public override string ToString(Mission element)
+        {
+            return $"{{()}}";  
+        }
+
         public override bool Update(Mission element)
         {
-            request = "UPDATE missions SET nomMission = @nomMission, dateCreation = @dateCreation, descriptions = @descriptions, dateDebut = @dateDebut ,dateFin=@dateFin , idService=@idService WHERE idMission = @idMission,";
+            request = "UPDATE missions SET nomMission = @nomMission, dateCreation = @dateCreation, descriptions = @descriptions," +
+                " dateDebut = @dateDebut ,dateFin=@dateFin,etat=@Etat , idServicePersonne=@idServicePersonne WHERE idMission = @idMission,";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nomMission", element.NomMission));
@@ -121,7 +129,8 @@ namespace TpIntranetEntreprise.DAO
             command.Parameters.Add(new SqlParameter("@descriptions", element.Descriptions));
             command.Parameters.Add(new SqlParameter("@dateDebut", element.DateDebut));
             command.Parameters.Add(new SqlParameter("@dateFin", element.DateFin));
-            command.Parameters.Add(new SqlParameter("@idService", element.IdService));
+            command.Parameters.Add(new SqlParameter("@etat", element.Etat));
+            command.Parameters.Add(new SqlParameter("@idServicePersonne", element.IdService));
             connection.Open();
             int nbRow = command.ExecuteNonQuery();
             command.Dispose();

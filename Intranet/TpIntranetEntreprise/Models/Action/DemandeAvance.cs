@@ -1,48 +1,70 @@
 ﻿using System;
+using System.Collections.Generic;
 using TpIntranetEntreprise.DAO;
 
 namespace TpIntranetEntreprise.Models.Action
 {
     public class DemandeAvance 
     {
-        private bool validN1;
-        private bool validN2;
+        private int idDemandeAvance;
         private DateTime dateDemande;
-        private string notifications;
         private int matriculeCollab;
         private bool etat;
-        private string nomMission;
+        private string nomDemande;
         private string lienNoteFrais;
 
         public DemandeAvance()
         {
-
+            IdDemandeAvance++;
         }
 
-        public DemandeAvance( DateTime dateDemande, string notifications,
-            int matriculeCollab, string nomMission, string lienNoteFrais, bool etat)
+        public DemandeAvance( DateTime dateDemande, string titreNotifications,
+            int matriculeCollab, string nomDemande, string lienNoteFrais, bool etat) : this()
         {
             DateDemande = dateDemande;
-            Notifications = notifications;
             MatriculeCollab = matriculeCollab;
-            NomMission = nomMission;
+            NomDemande = nomDemande;
             LienNoteFrais = lienNoteFrais;
             Etat = etat;
         }
 
-        public bool ValidN1 { get => validN1; set => validN1 = value; }
-        public bool ValidN2 { get => validN2; set => validN2 = value; }
         public DateTime DateDemande { get => dateDemande; set => dateDemande = value; }
-        public string Notifications { get => notifications; set => notifications = value; }
         public int MatriculeCollab { get => matriculeCollab; set => matriculeCollab = value; }
-        public string NomMission { get => nomMission; set => nomMission = value; }
+        public string NomDemande { get => nomDemande; set => nomDemande = value; }
         public string LienNoteFrais { get => lienNoteFrais; set => lienNoteFrais = value; }
         public bool Etat { get => etat; set => etat = value; }
+        public int IdDemandeAvance { get => idDemandeAvance; set => idDemandeAvance = value; }
 
-        public new bool Save()
+        public bool Save()
         {
-            BaseDAO<DemandeAvance> dao = new DemandeAvanceDAO();
-            return dao.Ajouter(this);
+            BaseDAO<DemandeAvance> DemandeAvancedao = new DemandeAvanceDAO();
+            return DemandeAvancedao.Ajouter(this);
+        }
+        public bool Delete()
+        {
+            BaseDAO<DemandeAvance> DemandeAvancedao = new DemandeAvanceDAO();
+            return DemandeAvancedao.Delete(this);
+        }
+        public DemandeAvance Find(string nom)
+        {
+            BaseDAO<DemandeAvance> DemandeAvancedao = new DemandeAvanceDAO();
+            return DemandeAvancedao.Find(nom);
+        }
+        public List<DemandeAvance> Find(Func<DemandeAvance, bool> criteria)
+        {
+            BaseDAO<DemandeAvance> DemandeAvancedao = new DemandeAvanceDAO();
+            return DemandeAvancedao.Find(criteria);
+        }
+        public List<DemandeAvance> FindAl()
+        {
+            BaseDAO<DemandeAvance> DemandeAvancedao = new DemandeAvanceDAO();
+
+            return DemandeAvancedao.FindAll();
+        }
+        public bool Update(DemandeAvance element)
+        {
+            BaseDAO<DemandeAvance> DemandeAvancedao = new DemandeAvanceDAO();
+            return DemandeAvancedao.Update(element);
         }
     }
 }

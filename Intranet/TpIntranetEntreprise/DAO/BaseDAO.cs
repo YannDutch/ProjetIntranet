@@ -30,6 +30,6 @@ namespace TpIntranetEntreprise.DAO
         
         
         public abstract bool Update(T element);
-
+        public abstract string ToString(T element);
     }
 }

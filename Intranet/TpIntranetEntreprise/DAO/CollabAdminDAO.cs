@@ -12,14 +12,15 @@ namespace TpIntranetEntreprise.DAO
         public override bool Ajouter(CollabAdmin element)
         {
             connection = Connection.New;
-            request = "INSERT into collaborateurs ( nom, prenom, dateNaissance, MDP, nomTypeCollab) " +
-                "OUTPUT INSERTED.ID values( @nom, @prenom, @dateNaissance,@MDP,@nomTypeCollab)";
+            request = "INSERT into collaborateurs ( nom, prenom, dateNaissance, MDP,nomServicePersonne, nomTypeCollab) " +
+                "OUTPUT INSERTED.ID values( @nom, @prenom, @dateNaissance,@MDP,@nomServicePersonne,@nomTypeCollab)";
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nom", element.Nom));
             command.Parameters.Add(new SqlParameter("@prenom", element.Prenom));
             command.Parameters.Add(new SqlParameter("@dateNaissance", element.DateNaissance));
             command.Parameters.Add(new SqlParameter("@MDP", element.MDP1));
-            command.Parameters.Add(new SqlParameter("@nomTypeCollab", element.NomTypeCollab)); ;
+            command.Parameters.Add(new SqlParameter("@nomTypeCollab", element.NomTypeCollab));
+            command.Parameters.Add(new SqlParameter("@nomServicePersonne", element.NomServicePersonne));
             connection.Open();
             element.MatriculeCollab = (int)command.ExecuteScalar();
             command.Dispose();
@@ -43,7 +44,8 @@ namespace TpIntranetEntreprise.DAO
         public override CollabAdmin Find(string nom)
         {
             CollabAdmin admin = null;
-            request = "SELECT nom, prenom,dateNaissance, MDP,nomTypeCollab FROM collaborateurs WHERE matriculeCollab=@matriculeCollab";
+            request = "SELECT nom, prenom,dateNaissance, MDP,nomServicePersonne," +
+                "nomTypeCollab FROM collaborateurs WHERE matriculeCollab=@matriculeCollab";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nom", nom));
@@ -57,7 +59,8 @@ namespace TpIntranetEntreprise.DAO
                     Prenom = reader.GetString(1),
                     DateNaissance = reader.GetString(2),
                     MDP1 = reader.GetString(3),
-                    NomTypeCollab = reader.GetString(4),
+                    NomServicePersonne = reader.GetString(4),
+                    NomTypeCollab = reader.GetString(5),
                 };
             }
             reader.Close();
@@ -82,7 +85,8 @@ namespace TpIntranetEntreprise.DAO
         public override List<CollabAdmin> FindAll()
         {
             List<CollabAdmin> admins = new List<CollabAdmin>();
-            request = "SELECT matriculeCollab, nom,prenom, dateNaissance, MDP,nomTypeColabb FROM collaborateurs";
+            request = "SELECT matriculeCollab, nom,prenom, dateNaissance, MDP" +
+                ",nomServicePersonne,nomTypeColabb FROM collaborateurs";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             connection.Open();
@@ -96,6 +100,7 @@ namespace TpIntranetEntreprise.DAO
                     Prenom = reader.GetString(2),
                     DateNaissance = reader.GetString(3),
                     MDP1 = reader.GetString(4),
+                    NomServicePersonne = reader.GetString(5),
                     NomTypeCollab = reader.GetString(5),
                 };
                 admins.Add(a);
@@ -108,20 +113,27 @@ namespace TpIntranetEntreprise.DAO
 
         public override bool Update(CollabAdmin element)
         {
-            request = "UPDATE collaborateurs SET nom = @nom, prenom = @prenom, dateNaissance = @dateNaissance, MDP = @MDP,nomTypeCollab=@nomTypeCollab WHERE matricule = @matricule";
+            request = "UPDATE collaborateurs SET nom = @nom, prenom = @prenom, dateNaissance = @dateNaissance, MDP = @MDP" +
+                "nomServicePersonne=@nomServicePersonne,nomTypeCollab=@nomTypeCollab WHERE matriculeCollab = @matriculeCollab";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nom", element.Nom));
             command.Parameters.Add(new SqlParameter("@prenom", element.Prenom));
             command.Parameters.Add(new SqlParameter("@dateNaissance", element.DateNaissance));
             command.Parameters.Add(new SqlParameter("@MDP", element.MDP1));
-            command.Parameters.Add(new SqlParameter("@matricule", element.MatriculeCollab));
+            command.Parameters.Add(new SqlParameter("@matriculeCollab", element.MatriculeCollab));
+            command.Parameters.Add(new SqlParameter("@nomServicePersonne", element.NomServicePersonne));
             command.Parameters.Add(new SqlParameter("@nomTypeCollab", element.NomTypeCollab));
             connection.Open();
             int nbRow = command.ExecuteNonQuery();
             command.Dispose();
             connection.Close();
             return nbRow == 1;
+        }
+
+        public override string ToString(CollabAdmin element)
+        {
+            return $"{{}}";
         }
     }
 }

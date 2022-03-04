@@ -1,29 +1,54 @@
-﻿using TpIntranetEntreprise.DAO;
+﻿using System;
+using System.Collections.Generic;
+using TpIntranetEntreprise.DAO;
 
 namespace TpIntranetEntreprise.Models.Collaborateur
 {
-    public class ChefService:Collaborateur
+    public class ChefService : Collaborateur
     {
-        private string nomTypeCollab;
-        private int idService;
+        private bool validN2;
         public ChefService()
         {
 
         }
 
-        public ChefService(string nomTypeCollab, int idService) : base()
+        public ChefService(bool validN2) : base()
         {
-            NomTypeCollab = nomTypeCollab;
-            IdService = idService;
+            ValidN2 = validN2;
         }
 
-        public string NomTypeCollab { get => nomTypeCollab; set => nomTypeCollab = value; }
-        public int IdService { get => idService; set => idService = value; }
+        public bool ValidN2 { get => validN2; set => validN2 = value; }
 
         public new bool Save()
         {
-            BaseDAO<ChefService> dao = new ChefServiceDAO();
-            return dao.Ajouter(this);
+            BaseDAO<ChefService> ChefServicedao = new ChefServiceDAO();
+            return ChefServicedao.Ajouter(this);
+        }
+        public new bool Delete()
+        {
+            BaseDAO<ChefService> ChefServicedao = new ChefServiceDAO();
+            return ChefServicedao.Delete(this);
+        }
+        public new ChefService Find(string nom)
+        {
+            BaseDAO<ChefService> ChefServicedao = new ChefServiceDAO();
+            return ChefServicedao.Find(nom);
+        }
+        public List<ChefService> Find(Func<ChefService, bool> criteria)
+        {
+            BaseDAO<ChefService> ChefServicedao = new ChefServiceDAO();
+            return ChefServicedao.Find(criteria);
+        }
+        public new List<ChefService> FindAl()
+        {
+            BaseDAO<ChefService> ChefServicedao = new ChefServiceDAO();
+
+            return ChefServicedao.FindAll();
+        }
+        public bool Update(ChefService element)
+        {
+            BaseDAO<ChefService> ChefServicedao = new ChefServiceDAO();
+            return ChefServicedao.Update(element);
         }
     }
 }

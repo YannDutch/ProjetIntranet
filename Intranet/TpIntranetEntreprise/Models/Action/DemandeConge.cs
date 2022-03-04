@@ -1,42 +1,71 @@
 ﻿using System;
+using System.Collections.Generic;
 using TpIntranetEntreprise.DAO;
 
 namespace TpIntranetEntreprise.Models.Action
 {
     public class DemandeConge
     {
-        private bool validN1;
-        private bool validN2;
+        private int idDemandeConges;
         private DateTime dateConges;
         private DateTime dateDemande;
-        private string notifications;
-        private string nomDemandeur;
+        private string nomDemande;
         private bool etat;
         private int matriculeCollab;
+        
 
         public DemandeConge()
         {
-
+            IdDemandeConges++;
         }
 
         public DemandeConge(DateTime dateConges, DateTime dateDemande
-            , string notifications, bool etat, int matriculeCollab, string nomDemandeur)
+            , bool etat, int matriculeCollab, string nomDemande): this()
         {
             DateConges = dateConges;
             DateDemande = dateDemande;
-            Notifications = notifications;
             Etat = etat;
             MatriculeCollab = matriculeCollab;
-            NomDemandeur = nomDemandeur;
+            NomDemande = nomDemande;
         }
-
-        public bool ValidN1 { get => validN1; set => validN1 = value; }
-        public bool ValidN2 { get => validN2; set => validN2 = value; }
         public DateTime DateConges { get => dateConges; set => dateConges = value; }
         public DateTime DateDemande { get => dateDemande; set => dateDemande = value; }
-        public string Notifications { get => notifications; set => notifications = value; }
         public bool Etat { get => etat; set => etat = value; }
         public int MatriculeCollab { get => matriculeCollab; set => matriculeCollab = value; }
-        public string NomDemandeur { get => nomDemandeur; set => nomDemandeur = value; }
+        public string NomDemande { get => nomDemande; set => nomDemande = value; }
+        public int IdDemandeConges { get => idDemandeConges; set => idDemandeConges = value; }
+
+        public  bool Save()
+        {
+            BaseDAO<DemandeConge> dao = new DemandeCongeDAO();
+            return dao.Ajouter(this);
+        }
+        public bool Delete()
+        {
+            BaseDAO<DemandeConge> dc =new DemandeCongeDAO();
+            return dc.Delete(this);
+        }
+        public DemandeConge Find(string nom)
+        {
+            BaseDAO<DemandeConge> dc=new DemandeCongeDAO();
+            return dc.Find(nom);
+        }
+        public List<DemandeConge> Find(Func<DemandeConge, bool> criteria)
+        {
+            BaseDAO<DemandeConge> dc= new DemandeCongeDAO();
+            return dc.Find(criteria);
+        }
+        public List<DemandeConge> FindAl()
+        {
+            BaseDAO<DemandeConge> dc = new DemandeCongeDAO();
+
+            return dc.FindAll();
+        }
+        public bool Update(DemandeConge element)
+        {
+            BaseDAO<DemandeConge> dc = new DemandeCongeDAO();
+            return dc.Update(element);
+        }
+
     }
 }

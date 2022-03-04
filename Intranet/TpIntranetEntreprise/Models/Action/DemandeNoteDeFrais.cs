@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using TpIntranetEntreprise.DAO;
 
 namespace TpIntranetEntreprise.Models.Action
@@ -9,12 +10,9 @@ namespace TpIntranetEntreprise.Models.Action
         private string nomNoteFrais;
         private DateTime dateSaisie;
         private DateTime dateEnvoie;
-        private bool validN1;
-        private bool validN2;
         private decimal sommeTotal;
         private decimal sommeAvance;
         private decimal sommeDue;
-        private string notifications;
         private bool saisieTermine;
         private int matriculeCollab;
         private int idMission;
@@ -26,7 +24,7 @@ namespace TpIntranetEntreprise.Models.Action
         }
 
         public DemandeNoteDeFrais( string nomNoteFrais, DateTime dateSaisie, DateTime dateEnvoie
-            , decimal sommeTotal, decimal sommeAvance, decimal sommeDue, string notifications, bool saisieTermine, int matriculeCollab, int idMission) :this()
+            , decimal sommeTotal, decimal sommeAvance, decimal sommeDue, bool saisieTermine, int matriculeCollab, int idMission) :this()
         {
             NomNoteFrais = nomNoteFrais;
             DateSaisie = dateSaisie;
@@ -34,7 +32,6 @@ namespace TpIntranetEntreprise.Models.Action
             SommeTotal = sommeTotal;
             SommeAvance = sommeAvance;
             SommeDue = sommeDue;
-            Notifications = notifications;
             SaisieTermine = saisieTermine;
             MatriculeCollab = matriculeCollab;
             IdMission = idMission;
@@ -44,14 +41,42 @@ namespace TpIntranetEntreprise.Models.Action
         public string NomNoteFrais { get => nomNoteFrais; set => nomNoteFrais = value; }
         public DateTime DateSaisie { get => dateSaisie; set => dateSaisie = value; }
         public DateTime DateEnvoie { get => dateEnvoie; set => dateEnvoie = value; }
-        public bool ValidN1 { get => validN1; set => validN1 = value; }
-        public bool ValidN2 { get => validN2; set => validN2 = value; }
         public decimal SommeTotal { get => sommeTotal; set => sommeTotal = value; }
         public decimal SommeAvance { get => sommeAvance; set => sommeAvance = value; }
         public decimal SommeDue { get => sommeDue; set => sommeDue = value; }
-        public string Notifications { get => notifications; set => notifications = value; }
         public bool SaisieTermine { get => saisieTermine; set => saisieTermine = value; }
         public int MatriculeCollab { get => matriculeCollab; set => matriculeCollab = value; }
         public int IdMission { get => idMission; set => idMission = value; }
+        public bool Save()
+        {
+            BaseDAO<DemandeNoteDeFrais> DemandeNoteDeFraisdao = new DemandeNoteDeFraisDAO();
+            return DemandeNoteDeFraisdao.Ajouter(this);
+        }
+        public bool Delete()
+        {
+            BaseDAO<DemandeNoteDeFrais> DemandeNoteDeFraisdao = new DemandeNoteDeFraisDAO();
+            return DemandeNoteDeFraisdao.Delete(this);
+        }
+        public DemandeNoteDeFrais Find(string nom)
+        {
+            BaseDAO<DemandeNoteDeFrais> DemandeNoteDeFraisdao = new DemandeNoteDeFraisDAO();
+            return DemandeNoteDeFraisdao.Find(nom);
+        }
+        public List<DemandeNoteDeFrais> Find(Func<DemandeNoteDeFrais, bool> criteria)
+        {
+            BaseDAO<DemandeNoteDeFrais> DemandeNoteDeFraisdao = new DemandeNoteDeFraisDAO();
+            return DemandeNoteDeFraisdao.Find(criteria);
+        }
+        public List<DemandeNoteDeFrais> FindAl()
+        {
+            BaseDAO<DemandeNoteDeFrais> DemandeNoteDeFraisdao = new DemandeNoteDeFraisDAO();
+
+            return DemandeNoteDeFraisdao.FindAll();
+        }
+        public bool Update(DemandeNoteDeFrais element)
+        {
+            BaseDAO<DemandeNoteDeFrais> DemandeNoteDeFraisdao = new DemandeNoteDeFraisDAO();
+            return DemandeNoteDeFraisdao.Update(element);
+        }
     }
 }

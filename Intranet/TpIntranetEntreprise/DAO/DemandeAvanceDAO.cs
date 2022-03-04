@@ -13,27 +13,27 @@ namespace TpIntranetEntreprise.Models.Action
         public override bool Ajouter(DemandeAvance element)
         {
             connection = Connection.New;
-            request = "INSERT into demandeAvance ( dateDemande, notifications,nomMission,etat, lienNoteFrais) " +
-                "OUTPUT INSERTED.ID values( @dateDemande, @notifications,@nomMission, @etat,@lienNoteFrais)";
+            request = "INSERT into demandeAvance ( dateDemande, matriculeCollab,nomDemande,etat, lienNoteFrais) " +
+                "OUTPUT INSERTED.ID values( @dateDemande, @matriculeCollab,@nomDemande, @etat,@lienNoteFrais)";
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@dateDemande", element.DateDemande));
-            command.Parameters.Add(new SqlParameter("@notifications", element.Notifications));
-            command.Parameters.Add(new SqlParameter("@nomMission", element.NomMission));
+            command.Parameters.Add(new SqlParameter("@matriculeCollab", element.MatriculeCollab));
+            command.Parameters.Add(new SqlParameter("@nomDemande", element.NomDemande));
             command.Parameters.Add(new SqlParameter("@etat", element.Etat));
             command.Parameters.Add(new SqlParameter("@lienNoteFrais", element.LienNoteFrais));
             connection.Open();
-            element.MatriculeCollab = (int)command.ExecuteScalar();
+            element.IdDemandeAvance = (int)command.ExecuteScalar();
             command.Dispose();
             connection.Close();
-            return element.MatriculeCollab > 0;
+            return element.IdDemandeAvance > 0;
         }
 
         public override bool Delete(DemandeAvance element)
         {
-            request = "DELETE FROM demandeAvance WHERE matriculeCollab=@matriculeCollab";
+            request = "DELETE FROM demandeAvance WHERE idDemandeAvance=@idDemandeAvance";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
-            command.Parameters.Add(new SqlParameter("@matriculeCollab", element.MatriculeCollab));
+            command.Parameters.Add(new SqlParameter("@idDemandeAvance", element.IdDemandeAvance));
             connection.Open();
             int nbrLigne = command.ExecuteNonQuery();
             command.Dispose();
@@ -44,20 +44,20 @@ namespace TpIntranetEntreprise.Models.Action
         public override DemandeAvance Find(string nom)
         {
             DemandeAvance da  = null;
-            request = "SELECT nomMission,dateDemande, notifications,lienNoteFrais,etat " +
-                "FROM demandeAvance WHERE matriculeCollab=@matriculeCollab";
+            request = "SELECT nomDemande,dateDemande, matriculeCollab,lienNoteFrais,etat " +
+                "FROM demandeAvance WHERE idDemandeAvance=@idDemandeAvance";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
-            command.Parameters.Add(new SqlParameter("@nomMission", nom));
+            command.Parameters.Add(new SqlParameter("@nomDemande", nom));
             connection.Open();
             reader = command.ExecuteReader();
             if (reader.Read())
             {
                 da = new DemandeAvance()
                 {
-                    NomMission = nom,
+                    NomDemande = nom,
                     DateDemande = (DateTime)reader.GetSqlDateTime(1),
-                    Notifications = reader.GetString(2),
+                    MatriculeCollab = reader.GetInt32(2),
                     LienNoteFrais = reader.GetString(3),
                     Etat = reader.GetBoolean(4),
                 };
@@ -84,8 +84,8 @@ namespace TpIntranetEntreprise.Models.Action
         public override List<DemandeAvance> FindAll()
         {
             List<DemandeAvance> Davances = new List<DemandeAvance>();
-            request = "SELECT matriculeCollab, nomMission,notifications,dateDemande, etat, lienNoteFrais" +
-                " FROM collaborateurs";
+            request = "SELECT matriculeCollab, nomDemande,idDemandeAvance,dateDemande, etat, lienNoteFrais" +
+                " FROM demandeAvance";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             connection.Open();
@@ -95,8 +95,8 @@ namespace TpIntranetEntreprise.Models.Action
                 DemandeAvance da = new DemandeAvance()
                 {
                     MatriculeCollab = reader.GetInt32(0),
-                    NomMission = reader.GetString(1),
-                    Notifications = reader.GetString(2),
+                    NomDemande = reader.GetString(1),
+                    IdDemandeAvance = reader.GetInt32(2),
                     DateDemande = (DateTime)reader.GetSqlDateTime(3),
                     Etat = reader.GetBoolean(4),
                     LienNoteFrais = reader.GetString(5),
@@ -111,13 +111,13 @@ namespace TpIntranetEntreprise.Models.Action
 
         public override bool Update(DemandeAvance element)
         {
-            request = "UPDATE demandeAvance SET nomMission = @nomMission, dateDemande = @dateDemande, " +
-                "notifications = @notifications,etat=@etat,lienNoteFrais=@lienNoteFrais WHERE matriculeCollab = @matriculeCollab";
+            request = "UPDATE demandeAvance SET nomDemande = @nomDemande, dateDemande = @dateDemande, " +
+                "matriculeCollab = @matriculeCollab,etat=@etat,lienNoteFrais=@lienNoteFrais WHERE idDemandeAvance = @idDemandeAvance";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
-            command.Parameters.Add(new SqlParameter("@nomMission", element.NomMission));
+            command.Parameters.Add(new SqlParameter("@nomDemande", element.NomDemande));
             command.Parameters.Add(new SqlParameter("@dateDemande", element.DateDemande));
-            command.Parameters.Add(new SqlParameter("@notifications", element.Notifications));
+            command.Parameters.Add(new SqlParameter("@matriculeCollab", element.MatriculeCollab));
             command.Parameters.Add(new SqlParameter("@etat", element.Etat));
             command.Parameters.Add(new SqlParameter("@lienNoteFrais", element.LienNoteFrais));
             connection.Open();
@@ -125,6 +125,10 @@ namespace TpIntranetEntreprise.Models.Action
             command.Dispose();
             connection.Close();
             return nbRow == 1;
+        }
+        public override string ToString(DemandeAvance element)
+        {
+            return $"{element.NomDemande},{element.DateDemande} ,{element.LienNoteFrais},{element.Etat},{element.MatriculeCollab}";
         }
     }
 }

@@ -13,8 +13,8 @@ namespace TpIntranetEntreprise.Models.Action
         public override bool Ajouter(DemandeNoteDeFrais element)
         {
             connection = Connection.New;
-            request = "INSERT into notesFrais( nomNoteFrais, dateSaisie,dateEnvoie,sommmeTotal,sommeAvance,sommeDue,notifications,saisieTermine,matriculeCollab,idMission) " +
-                "OUTPUT INSERTED.ID values( @nomNoteFrais, @dateSaisie,@dateEnvoie, @sommmeTotal,@sommeAvance,@sommeDue,@notifications,@saisieTermine,@matriculeCollab,@idMission)";
+            request = "INSERT into notesFrais( nomNoteFrais, dateSaisie,dateEnvoie,sommmeTotal,sommeAvance,sommeDue,saisieTermine,matriculeCollab,idMission) " +
+                "OUTPUT INSERTED.ID values( @nomNoteFrais, @dateSaisie,@dateEnvoie, @sommmeTotal,@sommeAvance,@sommeDue,@saisieTermine,@matriculeCollab,@idMission)";
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nomNoteFrais", element.NomNoteFrais));
             command.Parameters.Add(new SqlParameter("@dateSaisie", element.DateSaisie));
@@ -22,7 +22,6 @@ namespace TpIntranetEntreprise.Models.Action
             command.Parameters.Add(new SqlParameter("@sommmeTotal", element.SommeTotal));
             command.Parameters.Add(new SqlParameter("@sommeAvance", element.SommeAvance));
             command.Parameters.Add(new SqlParameter("@sommeDue", element.SommeDue));
-            command.Parameters.Add(new SqlParameter("@notifications", element.Notifications));
             command.Parameters.Add(new SqlParameter("@saisieTermine", element.SaisieTermine));
             command.Parameters.Add(new SqlParameter("@idMission", element.IdMission));
             command.Parameters.Add(new SqlParameter("@matriculeCollab", element.MatriculeCollab));
@@ -49,7 +48,7 @@ namespace TpIntranetEntreprise.Models.Action
         public override DemandeNoteDeFrais Find(string nom)
         {
             DemandeNoteDeFrais dnf = null;
-            request = "SELECT nomNoteFrais, dateSaisie,dateEnvoie,sommmeTotal,sommeAvance,sommeDue,notifications,saisieTermine,matriculeCollab,idMission " +
+            request = "SELECT nomNoteFrais, dateSaisie,dateEnvoie,sommmeTotal,sommeAvance,sommeDue,saisieTermine,matriculeCollab,idMission " +
                 "FROM notesFrais WHERE idNoteFrais=@idNoteFrais";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
@@ -66,7 +65,6 @@ namespace TpIntranetEntreprise.Models.Action
                     SommeTotal = reader.GetDecimal(3),
                     SommeAvance = reader.GetDecimal(4),
                     SommeDue = reader.GetDecimal(5),
-                    Notifications = reader.GetString(6),
                     SaisieTermine = reader.GetBoolean(7),
                     MatriculeCollab = reader.GetInt32(8),
                     IdMission = reader.GetInt32(9),
@@ -94,7 +92,7 @@ namespace TpIntranetEntreprise.Models.Action
         public override List<DemandeNoteDeFrais> FindAll()
         {
             List<DemandeNoteDeFrais> DnotesFrais = new List<DemandeNoteDeFrais>();
-            request = "SELECT nomNoteFrais, dateSaisie,dateEnvoie,sommmeTotal,sommeAvance,sommeDue,notifications,saisieTermine,matriculeCollab,idMission" +
+            request = "SELECT nomNoteFrais, dateSaisie,dateEnvoie,sommmeTotal,sommeAvance,sommeDue,saisieTermine,matriculeCollab,idMission" +
                 " FROM notesFrais";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
@@ -110,7 +108,6 @@ namespace TpIntranetEntreprise.Models.Action
                     SommeTotal = reader.GetDecimal(3),
                     SommeAvance = reader.GetDecimal(4),
                     SommeDue = reader.GetDecimal(5),
-                    Notifications = reader.GetString(6),
                     SaisieTermine = reader.GetBoolean(7),
                     MatriculeCollab = reader.GetInt32(8),
                     IdMission = reader.GetInt32(9)
@@ -125,8 +122,8 @@ namespace TpIntranetEntreprise.Models.Action
 
         public override bool Update(DemandeNoteDeFrais element)
         {
-            request = "UPDATE noteFrais SET nomNoteFrais = @nomNoteFrais,dateSaisie=@dateSaisie, dateEnvoie = @dateEnvoie,sommmeTotal = @notifications," +
-                "sommeAvance=@etat,sommeDue=@sommeDue,notifications=@notifications,saisieTermine=@saisieTermine,matriculeCollab=@matriculeCollab,idMission=@idMission WHERE idNoteFrais = @idNoteFrais";
+            request = "UPDATE noteFrais SET nomNoteFrais = @nomNoteFrais,dateSaisie=@dateSaisie, dateEnvoie = @dateEnvoie,sommmeTotal = @sommeTotal," +
+                "sommeAvance=@sommeAvance,sommeDue=@sommeDue,saisieTermine=@saisieTermine,matriculeCollab=@matriculeCollab,idMission=@idMission WHERE idNoteFrais = @idNoteFrais";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nomNoteFrais", element.NomNoteFrais));
@@ -135,7 +132,6 @@ namespace TpIntranetEntreprise.Models.Action
             command.Parameters.Add(new SqlParameter("@sommmeTotal", element.SommeTotal));
             command.Parameters.Add(new SqlParameter("@sommeAvance", element.SommeAvance));
             command.Parameters.Add(new SqlParameter("@sommeDue", element.SommeDue));
-            command.Parameters.Add(new SqlParameter("@notifications", element.Notifications));
             command.Parameters.Add(new SqlParameter("@saisieTermine", element.SaisieTermine));
             command.Parameters.Add(new SqlParameter("@idMission", element.IdMission));
             command.Parameters.Add(new SqlParameter("@matriculeCollab", element.MatriculeCollab));
@@ -144,6 +140,11 @@ namespace TpIntranetEntreprise.Models.Action
             command.Dispose();
             connection.Close();
             return nbRow == 1;
+        }
+
+        public override string ToString(DemandeNoteDeFrais element)
+        {
+            return $"{{}}";
         }
     }
 }

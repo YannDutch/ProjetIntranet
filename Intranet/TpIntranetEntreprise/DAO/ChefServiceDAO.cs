@@ -11,15 +11,15 @@ namespace TpIntranetEntreprise.DAO
         public override bool Ajouter(ChefService element)
         {
             connection = Connection.New;
-            request = "INSERT into collaborateurs ( nom, prenom, dateNaissance, MDP,idService, nomTypeCollab) " +
-                "OUTPUT INSERTED.ID values( @nom, @prenom, @dateNaissance,@MDP,@idService,@nomTypeCollab)";
+            request = "INSERT into collaborateurs ( nom, prenom, dateNaissance, MDP,nomServicePersonne, nomTypeCollab) " +
+                "OUTPUT INSERTED.ID values( @nom, @prenom, @dateNaissance,@MDP,@nomServicePersonne,@nomTypeCollab)";
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nom", element.Nom));
             command.Parameters.Add(new SqlParameter("@prenom", element.Prenom));
             command.Parameters.Add(new SqlParameter("@dateNaissance", element.DateNaissance));
             command.Parameters.Add(new SqlParameter("@MDP", element.MDP1));
-            command.Parameters.Add(new SqlParameter("@nomTypeCollab", element.NomTypeCollab)); 
-            command.Parameters.Add(new SqlParameter("@idService", element.IdService)); 
+            command.Parameters.Add(new SqlParameter("@nomTypeCollab", element.NomTypeCollab));
+            command.Parameters.Add(new SqlParameter("@nomServicePersonne", element.NomServicePersonne));
             connection.Open();
             element.MatriculeCollab = (int)command.ExecuteScalar();
             command.Dispose();
@@ -43,7 +43,7 @@ namespace TpIntranetEntreprise.DAO
         public override ChefService Find(string nom)
         {
             ChefService chefservice = null;
-            request = "SELECT nom, prenom,dateNaissance, MDP,idService,nomTypeCollab FROM collaborateurs WHERE matriculeCollab=@matriculeCollab";
+            request = "SELECT nom, prenom,dateNaissance, MDP,nomTypeCollab,nomServicePersonne FROM collaborateurs WHERE matriculeCollab=@matriculeCollab";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nom", nom));
@@ -57,8 +57,8 @@ namespace TpIntranetEntreprise.DAO
                     Prenom = reader.GetString(1),
                     DateNaissance = reader.GetString(2),
                     MDP1 = reader.GetString(3),
-                    NomTypeCollab = reader.GetString(5),
-                    IdService = reader.GetInt32(4),
+                    NomTypeCollab = reader.GetString(4),
+                    NomServicePersonne = reader.GetString(5),
                 };
             }
             reader.Close();
@@ -83,7 +83,7 @@ namespace TpIntranetEntreprise.DAO
         public override List<ChefService> FindAll()
         {
             List<ChefService> chefservices = new List<ChefService>();
-            request = "SELECT matriculeCollab, nom,prenom, dateNaissance, MDP,idService,nomTypeCollab FROM collaborateurs";
+            request = "SELECT matriculeCollab, nom,prenom, dateNaissance, MDP,nomServicePersonne,nomTypeCollab FROM collaborateurs";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             connection.Open();
@@ -97,7 +97,7 @@ namespace TpIntranetEntreprise.DAO
                     Prenom = reader.GetString(2),
                     DateNaissance = reader.GetString(3),
                     MDP1 = reader.GetString(4),
-                    IdService = reader.GetInt32(5),
+                    NomServicePersonne = reader.GetString(5),
                     NomTypeCollab = reader.GetString(6),
                 };
                 chefservices.Add(cs);
@@ -110,7 +110,8 @@ namespace TpIntranetEntreprise.DAO
 
         public override bool Update(ChefService element)
         {
-            request = "UPDATE collaborateurs SET nom = @nom, prenom = @prenom, dateNaissance = @dateNaissance, MDP = @MDP,idService=@IdService,nomTypeCollab=@nomTypeCollab WHERE matriculeCollab = @matriculeCollab";
+            request = "UPDATE collaborateurs SET nom = @nom, prenom = @prenom, dateNaissance = @dateNaissance, MDP = @MDP" +
+                ",nomServicePersonne=@nomServicePersonne,nomTypeCollab=@nomTypeCollab WHERE matriculeCollab = @matriculeCollab";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nom", element.Nom));
@@ -119,13 +120,18 @@ namespace TpIntranetEntreprise.DAO
             command.Parameters.Add(new SqlParameter("@MDP", element.MDP1));
             command.Parameters.Add(new SqlParameter("@matricule", element.MatriculeCollab));
             command.Parameters.Add(new SqlParameter("@nomTypeCollab", element.NomTypeCollab));
-            command.Parameters.Add(new SqlParameter("@idService", element.IdService));
+            command.Parameters.Add(new SqlParameter("@nomServicePersonne", element.NomServicePersonne));
 
             connection.Open();
             int nbRow = command.ExecuteNonQuery();
             command.Dispose();
             connection.Close();
             return nbRow == 1;
+        }
+
+        public override string ToString(ChefService element)
+        {
+            return $"{{}}";
         }
     }
 }

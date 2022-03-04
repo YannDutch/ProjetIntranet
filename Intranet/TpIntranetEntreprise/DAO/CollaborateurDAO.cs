@@ -12,14 +12,16 @@ namespace TpIntranetEntreprise.DAO
     {
         public override bool Ajouter(Collaborateur element)
         {
-            request = "INSERT INTO collaborateurs (nom, prenom, dateNaissance, MDP) " +
-                "OUTPUT INSERTED.ID VALUES (@nom, @prenom, @dateNaissance, @MDP)";
             connection = Connection.New;
+            request = "INSERT into collaborateurs ( nom, prenom, dateNaissance, MDP,nomServicePersonne, nomTypeCollab) " +
+                "OUTPUT INSERTED.ID values( @nom, @prenom, @dateNaissance,@MDP,@nomServicePersonne,@nomTypeCollab)";
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nom", element.Nom));
             command.Parameters.Add(new SqlParameter("@prenom", element.Prenom));
             command.Parameters.Add(new SqlParameter("@dateNaissance", element.DateNaissance));
             command.Parameters.Add(new SqlParameter("@MDP", element.MDP1));
+            command.Parameters.Add(new SqlParameter("@nomTypeCollab", element.NomTypeCollab));
+            command.Parameters.Add(new SqlParameter("@nomServicePersonne", element.NomServicePersonne));
             connection.Open();
             element.MatriculeCollab = (int)command.ExecuteScalar();
             command.Dispose();
@@ -42,7 +44,8 @@ namespace TpIntranetEntreprise.DAO
 
         public override bool Update(Collaborateur element)
         {
-            request = "UPDATE collaborateurs SET nom = @nom, prenom = @prenom, dateNaissance = @dateNaissance, MDP = @MDP, WHERE matriculeCollab = @matriculeCollab";
+            request = "UPDATE collaborateurs SET nom = @nom, prenom = @prenom, dateNaissance = @dateNaissance," +
+                " MDP = @MDP,nomServicePersonne=@nomServicePersonne,nomTypeCollab=@nomTypeCollab, WHERE matriculeCollab = @matriculeCollab";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nom", element.Nom));
@@ -50,6 +53,8 @@ namespace TpIntranetEntreprise.DAO
             command.Parameters.Add(new SqlParameter("@dateNaissance", element.DateNaissance));
             command.Parameters.Add(new SqlParameter("@MDP", element.MDP1));
             command.Parameters.Add(new SqlParameter("@matriculeCollab", element.MatriculeCollab));
+            command.Parameters.Add(new SqlParameter("@nomServicePersonne", element.NomServicePersonne));
+            command.Parameters.Add(new SqlParameter("@nomTypeCollab", element.NomTypeCollab));
             connection.Open();
             int nbRow = command.ExecuteNonQuery();
             command.Dispose();
@@ -60,7 +65,8 @@ namespace TpIntranetEntreprise.DAO
         public override Collaborateur Find(string nom)
         {
             Collaborateur collaborateur = null;
-            request = "SELECT matriculeCollab, nom, prenom, dateNaissance, MDP FROM collaborateurs WHERE nom=@nom";
+            request = "SELECT  nom, prenom, dateNaissance, MDP,nomServicePersonne,nomTypeCollab" +
+                "FROM collaborateurs WHERE matriucleCollab=@matriucleCollab";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nom", nom));
@@ -70,11 +76,12 @@ namespace TpIntranetEntreprise.DAO
             {
                 collaborateur = new Collaborateur
                 {
-                    MatriculeCollab = reader.GetInt32(0),
                     Nom = nom,
-                    Prenom = reader.GetString(2),
-                    DateNaissance= reader.GetString(3),
-                    MDP1 = reader.GetString(4),
+                    Prenom = reader.GetString(1),
+                    DateNaissance= reader.GetString(2),
+                    MDP1 = reader.GetString(3),
+                    NomServicePersonne = reader.GetString(4),
+                    NomTypeCollab = reader.GetString(5),
                 };
             }
             reader.Close();
@@ -100,7 +107,7 @@ namespace TpIntranetEntreprise.DAO
         public override List<Collaborateur> FindAll()
         {
             List<Collaborateur> collaborateurs = new List<Collaborateur>();
-            request = "SELECT matriculeCollab, nom, prenom, dateNaissance, MDP FROM collaborateurs";
+            request = "SELECT matriculeCollab, nom, prenom, dateNaissance, MDP,nomServicePersonne,nomTypeCollab FROM collaborateurs";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
             connection.Open();
@@ -113,7 +120,9 @@ namespace TpIntranetEntreprise.DAO
                     Nom = reader.GetString(1),
                     Prenom = reader.GetString(2),
                     DateNaissance = reader.GetString(3),
-                    MDP1 = reader.GetString(4),                   
+                    MDP1 = reader.GetString(4),
+                    NomServicePersonne = reader.GetString(5),
+                    NomTypeCollab = reader.GetString(6),
                 };
                 collaborateurs.Add(c);
             }
@@ -123,6 +132,10 @@ namespace TpIntranetEntreprise.DAO
             return collaborateurs;
         }
 
+        public override string ToString(Collaborateur element)
+        {
+            return $"{{}}";
+        }
     }
 }
 

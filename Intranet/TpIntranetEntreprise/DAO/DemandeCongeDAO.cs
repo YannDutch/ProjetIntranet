@@ -13,27 +13,26 @@ namespace TpIntranetEntreprise.Models.Action
         public override bool Ajouter(DemandeConge element)
         {
             connection = Connection.New;
-            request = "INSERT into demandeConges( dateConges, dateDemande,nom,etat, notifications) " +
-                "OUTPUT INSERTED.ID values( @dateConges, @dateDemande,@nom, @etat,@notifications)";
+            request = "INSERT into demandeConges( dateConges, dateDemande,nomDemande,etat, matriculeCollab) " +
+                "OUTPUT INSERTED.ID values( @dateConges, @dateDemande,@nomDemande, @etat,@matriculeCollab)";
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@dateDemande", element.DateDemande));
-            command.Parameters.Add(new SqlParameter("@notifications", element.Notifications));
-            command.Parameters.Add(new SqlParameter("@nom", element.NomDemandeur));
+            command.Parameters.Add(new SqlParameter("@nomDemande", element.NomDemande));
             command.Parameters.Add(new SqlParameter("@etat", element.Etat));
             command.Parameters.Add(new SqlParameter("@dateConges", element.DateConges));
             connection.Open();
-            element.MatriculeCollab = (int)command.ExecuteScalar();
+            element.IdDemandeConges = (int)command.ExecuteScalar();
             command.Dispose();
             connection.Close();
-            return element.MatriculeCollab > 0;
+            return element.IdDemandeConges > 0;
         }
 
         public override bool Delete(DemandeConge element)
         {
-            request = "DELETE FROM demandeConges WHERE matriculeCollab=@matriculeCollab";
+            request = "DELETE FROM demandeConges WHERE idDemandeConges=@idDemandeConges";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
-            command.Parameters.Add(new SqlParameter("@matriculeCollab", element.MatriculeCollab));
+            command.Parameters.Add(new SqlParameter("@idDemandeConges", element.IdDemandeConges));
             connection.Open();
             int nbrLigne = command.ExecuteNonQuery();
             command.Dispose();
@@ -44,21 +43,21 @@ namespace TpIntranetEntreprise.Models.Action
         public override DemandeConge Find(string nom)
         {
             DemandeConge dc = null;
-            request = "SELECT nom,dateConges,dateDemande, notifications,etat " +
-                "FROM demandeConges WHERE matriculeCollab=@matriculeCollab";
+            request = "SELECT nom,dateConges,dateDemande, matriculeCollab,etat " +
+                "FROM demandeConges WHERE idDemandeConges=@idDemandeConges";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
-            command.Parameters.Add(new SqlParameter("@nom", nom));
+            command.Parameters.Add(new SqlParameter("@nomDemande", nom));
             connection.Open();
             reader = command.ExecuteReader();
             if (reader.Read())
             {
                 dc = new DemandeConge()
                 {
-                    NomDemandeur = nom,
+                    NomDemande = nom,
                     DateDemande = (DateTime)reader.GetSqlDateTime(2),
                     DateConges = (DateTime)reader.GetSqlDateTime(1),
-                    Notifications = reader.GetString(3),
+                    MatriculeCollab = reader.GetInt32(3),
                     Etat = reader.GetBoolean(4),
                 };
             }
@@ -84,7 +83,7 @@ namespace TpIntranetEntreprise.Models.Action
         public override List<DemandeConge> FindAll()
         {
             List<DemandeConge> Dconges = new List<DemandeConge>();
-            request = "SELECT matriculeCollab, nom,notifications,dateConges,dateDemande, etat" +
+            request = "SELECT matriculeCollab, nomDemande,idDemandeConges,dateConges,dateDemande, etat" +
                 " FROM demandeConges";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
@@ -95,8 +94,8 @@ namespace TpIntranetEntreprise.Models.Action
                 DemandeConge dc = new DemandeConge()
                 {
                     MatriculeCollab = reader.GetInt32(0),
-                    NomDemandeur = reader.GetString(1),
-                    Notifications = reader.GetString(2),
+                    NomDemande = reader.GetString(1),
+                    IdDemandeConges = reader.GetInt32(2),
                     DateConges= (DateTime)reader.GetSqlDateTime(3),
                     DateDemande = (DateTime)reader.GetSqlDateTime(4),
                     Etat = reader.GetBoolean(5),
@@ -111,20 +110,24 @@ namespace TpIntranetEntreprise.Models.Action
 
         public override bool Update(DemandeConge element)
         {
-            request = "UPDATE demandeConges SET nom = @nom,dateConges=@dateConges, dateDemande = @dateDemande, " +
-                            "notifications = @notifications,etat=@etat WHERE matriculeCollab = @matriculeCollab";
+            request = "UPDATE demandeConges SET nomDemande = @nomDemande,dateConges=@dateConges, dateDemande = @dateDemande, " +
+                            "matriculeCollab = @matriculeCollab,etat=@etat WHERE idDemandeConges = @idDemandeConges";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
-            command.Parameters.Add(new SqlParameter("@nom", element.NomDemandeur));
+            command.Parameters.Add(new SqlParameter("@nom", element.NomDemande));
             command.Parameters.Add(new SqlParameter("@dateConges", element.DateConges));
             command.Parameters.Add(new SqlParameter("@dateDemande", element.DateDemande));
-            command.Parameters.Add(new SqlParameter("@notifications", element.Notifications));
+            command.Parameters.Add(new SqlParameter("@matriculeCollab", element.MatriculeCollab));
             command.Parameters.Add(new SqlParameter("@etat", element.Etat));
             connection.Open();
             int nbRow = command.ExecuteNonQuery();
             command.Dispose();
             connection.Close();
             return nbRow == 1;
+        }
+        public override string ToString(DemandeConge element)
+        {
+            return $"{element.NomDemande},{element.DateDemande},{element.DateConges},{element.Etat},{element.MatriculeCollab}";
         }
     }
 }

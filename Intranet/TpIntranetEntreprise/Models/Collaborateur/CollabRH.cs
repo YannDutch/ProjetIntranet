@@ -9,24 +9,50 @@ namespace TpIntranetEntreprise.Models.Collaborateur
 {
     public class CollabRH : Collaborateur
     {
-        private string nomTypeCollab;
+        private bool validN1;
+
+
 
         public CollabRH()
         {
 
         }
 
-        public CollabRH(string nomTypeCollab) : base()
+        public CollabRH(bool validN1) : base()
         {
-            NomTypeCollab = nomTypeCollab;
+            ValidN1 = validN1;
         }
-
-        public string NomTypeCollab { get => nomTypeCollab; set => nomTypeCollab = value; }
+        public bool ValidN1 { get => validN1; set => validN1 = value; }
         public new bool Save()
         {
-            BaseDAO<CollabRH> dao = new CollabRHDAO();
-            return dao.Ajouter(this);
+            BaseDAO<CollabRH> collabRHdao = new CollabRHDAO();
+            return collabRHdao.Ajouter(this);
         }
+        public new bool Delete()
+        {
+            BaseDAO<CollabRH> collabRHdao = new CollabRHDAO();
+            return collabRHdao.Delete(this);
+        }
+        public new CollabRH Find(string nom)
+        {
+            BaseDAO<CollabRH> collabRHdao = new CollabRHDAO();
+            return collabRHdao.Find(nom);
+        }
+        public List<CollabRH> Find(Func<CollabRH, bool> criteria)
+        {
+            BaseDAO<CollabRH> collabRHdao = new CollabRHDAO();
+            return collabRHdao.Find(criteria);
+        }
+        public new List<CollabRH> FindAl()
+        {
+            BaseDAO<CollabRH> collabRHdao = new CollabRHDAO();
 
+            return collabRHdao.FindAll();
+        }
+        public bool Update(CollabRH element)
+        {
+            BaseDAO<CollabRH> collabRHdao = new CollabRHDAO();
+            return collabRHdao.Update(element);
+        }
     }
 }
