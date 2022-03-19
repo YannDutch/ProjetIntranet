@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "InterfaceAdmin";
+}
+
+<form enctype="multipart/form-data" asp-controller="Interface" asp-action="SubmitCollab" method="post">
+    <input type="text" name="Nom" class="row mb-1 form-control" placeholder="Nom" />
+    <input type="text" name="Prenom" class="row mb-1 form-control" placeholder="Prenom" />
+    <input type="date" name="DateNaissance" class="row mb-1 form-control" placeholder="Date de Naissance" />
+    <input type="password" name="MDP" class="row mb-1 form-control" placeholder="Mot de passe" />
+
+    <select name="nomServicePersonne" class="row mb-1 form-control" aria-label="Default select example">
+        <option>selectionner un type de Service</option>
+        <option value="AutreService">Ajouter un Service</option>
+        <option value="Collaborateur">Collaborateur</option>
+        <option value="Compta">Comptabilité</option>
+        <option value="RH">Ressources Humaines</option>
+        <option value="ChefService">Chef de Service</option>
+        <option value="Admin">Administrateur</option>
+    </select>
+    
+    <select name="nomTypeCollab" class="row mb-1 form-control" aria-label="Default select example">
+        <option>selectionner un type de Collaborateur</option>
+        <option value="AutreCollab">Ajouter un Type de Collaborateur</option>
+        <option value="Collaborateur">Collaborateur</option>
+        <option value="Compta">Comptabilité</option>
+        <option value="RH">Ressources Humaines</option>
+        <option value="ChefService">Chef de Service</option>
+        <option value="Admin">Administrateur</option>
+    </select>
+
+    <button class="btn alert-dark row w-100" type="submit"> Valider</button>
+</form>

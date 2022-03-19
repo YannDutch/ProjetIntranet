@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetStage\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj": {}
+    "C:\\Users\\Administrateur\\Documents\\Stage\\Local\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetStage\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj": {
+    "C:\\Users\\Administrateur\\Documents\\Stage\\Local\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetStage\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
+        "projectUniqueName": "C:\\Users\\Administrateur\\Documents\\Stage\\Local\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
         "projectName": "TpIntranetEntreprise",
-        "projectPath": "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetStage\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
+        "projectPath": "C:\\Users\\Administrateur\\Documents\\Stage\\Local\\Intranet\\TpIntranetEntreprise\\TpIntranetEntreprise.csproj",
         "packagesPath": "C:\\Users\\Administrateur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrateur\\Documents\\Stage\\ProjetStage\\ProjetIntranet\\Intranet\\TpIntranetEntreprise\\obj\\",
+        "outputPath": "C:\\Users\\Administrateur\\Documents\\Stage\\Local\\Intranet\\TpIntranetEntreprise\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrateur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
             "System.Collections": {
               "target": "Package",
               "version": "[4.3.0, )"

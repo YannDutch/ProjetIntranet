@@ -21,14 +21,16 @@ CREATE TABLE typeCollaborateurs(
 idTypeCollab int not null,
 nomTypeCollab varchar(100)  PRIMARY KEY not null
 );
+INSERT INTO typeCollaborateurs(idTypeCollab,nomTypeCollab) VALUES('1','Collaborateur')
 
 CREATE TABLE typeServices(
 idTypeService int  not null,
 nomTypeService varchar(100) PRIMARY KEY not null
 );
+INSERT INTO typeServices(idTypeService,nomTypeService)VALUES('1','Collaborateur')
 
 CREATE TABLE collaborateurs(
-matriculeCollab int PRIMARY KEY IDENTITY(1,1),
+matriculeCollab int PRIMARY KEY,
 nom varchar(100) not null,
 prenom varchar(100) not null,
 dateNaissance datetime not null,
@@ -36,6 +38,7 @@ MDP VARCHAR (20) not null,
 nomServicePersonne varchar(100) FOREIGN KEY REFERENCES typeServices(nomTypeService) null ,
 nomTypeCollab varchar(100) FOREIGN KEY REFERENCES typeCollaborateurs(nomTypeCollab) null,
 );
+INSERT INTO collaborateurs (matriculeCollab,nom,prenom,dateNaissance, MDP, nomServicePersonne,nomTypeCollab) values ('1','lemaire', 'yoann', '10/11/2000','Lemaire','Collaborateur','Collaborateur')
 
 CREATE TABLE servicesPersonnes(
 idServicePersonne int PRIMARY KEY IDENTITY(1,1),
@@ -104,4 +107,3 @@ dateDemande datetime not null,
 nomDemande varchar(100) not null,
 matriculeCollab int foreign key references collaborateurs(matriculeCollab),
 );
-

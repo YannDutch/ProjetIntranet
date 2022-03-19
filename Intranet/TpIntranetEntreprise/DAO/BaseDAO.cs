@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
+using TpIntranetEntreprise.Models.Personne;
 
 namespace TpIntranetEntreprise.DAO
 {

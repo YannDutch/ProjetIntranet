@@ -1,8 +1,14 @@
 ﻿@{
-    ViewData["Title"] = "Accueil";
+    ViewData["Title"] = "Index";
 }
 
 <div class="text-center">
     <h1 class="display-4">Accueil INTRANET</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<form enctype="multipart/form-data" asp-controller="Home" asp-action="Login" method="post">
+    <input type="text" name="username" class="row mb-1 form-control" placeholder="Nom" />
+    <input type="password" name="password" class="row mb-1 form-control" placeholder="Mots De Passe" />
+
+    <button class="btn alert-dark row w-100" type="submit"> Valider</button>
+</form>

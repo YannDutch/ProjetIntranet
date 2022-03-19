@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
-using TpIntranetEntreprise.Models.Collaborateur;
+using TpIntranetEntreprise.Models.Personne;
 
 namespace TpIntranetEntreprise.DAO
 {
@@ -13,15 +13,16 @@ namespace TpIntranetEntreprise.DAO
         public override bool Ajouter(Collaborateur element)
         {
             connection = Connection.New;
-            request = "INSERT into collaborateurs ( nom, prenom, dateNaissance, MDP,nomServicePersonne, nomTypeCollab) " +
-                "OUTPUT INSERTED.ID values( @nom, @prenom, @dateNaissance,@MDP,@nomServicePersonne,@nomTypeCollab)";
+            request = "INSERT into collaborateurs ( matriculeCollab,nom, prenom, dateNaissance, MDP,nomServicePersonne, nomTypeCollab) " +
+                "OUTPUT INSERTED.ID values( @matriculeCollab,@nom, @prenom, @dateNaissance,@MDP,@nomServicePersonne,@nomTypeCollab)";
             command = new SqlCommand(request, connection);
+            command.Parameters.Add(new SqlParameter("@matriculeCollab", element.MatriculeCollab));
             command.Parameters.Add(new SqlParameter("@nom", element.Nom));
             command.Parameters.Add(new SqlParameter("@prenom", element.Prenom));
             command.Parameters.Add(new SqlParameter("@dateNaissance", element.DateNaissance));
             command.Parameters.Add(new SqlParameter("@MDP", element.MDP1));
-            command.Parameters.Add(new SqlParameter("@nomTypeCollab", element.NomTypeCollab));
             command.Parameters.Add(new SqlParameter("@nomServicePersonne", element.NomServicePersonne));
+            command.Parameters.Add(new SqlParameter("@nomTypeCollab", element.NomTypeCollab));
             connection.Open();
             element.MatriculeCollab = (int)command.ExecuteScalar();
             command.Dispose();
@@ -31,10 +32,10 @@ namespace TpIntranetEntreprise.DAO
 
         public override bool Delete(Collaborateur element)
         {
-            request = "DELETE FROM collaborateurs WHERE matricule=@matricule";
+            request = "DELETE FROM collaborateurs WHERE matriculeCollab=@matriculeCollab";
             connection = Connection.New;
             command = new SqlCommand(request, connection);
-            command.Parameters.Add(new SqlParameter("@matricule", element.MatriculeCollab));
+            command.Parameters.Add(new SqlParameter("@matriculeCollab", element.MatriculeCollab));
             connection.Open();
             int nbrLigne = command.ExecuteNonQuery();
             command.Dispose();
@@ -78,7 +79,7 @@ namespace TpIntranetEntreprise.DAO
                 {
                     Nom = nom,
                     Prenom = reader.GetString(1),
-                    DateNaissance= reader.GetString(2),
+                    DateNaissance= (DateTime)reader.GetSqlDateTime(2),
                     MDP1 = reader.GetString(3),
                     NomServicePersonne = reader.GetString(4),
                     NomTypeCollab = reader.GetString(5),
@@ -119,7 +120,7 @@ namespace TpIntranetEntreprise.DAO
                     MatriculeCollab = reader.GetInt32(0),
                     Nom = reader.GetString(1),
                     Prenom = reader.GetString(2),
-                    DateNaissance = reader.GetString(3),
+                    DateNaissance = (DateTime)reader.GetSqlDateTime(3),
                     MDP1 = reader.GetString(4),
                     NomServicePersonne = reader.GetString(5),
                     NomTypeCollab = reader.GetString(6),

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
-using TpIntranetEntreprise.Models.Collaborateur;
+using TpIntranetEntreprise.Models.Personne;
 
 namespace TpIntranetEntreprise.DAO
 {
@@ -58,7 +58,7 @@ namespace TpIntranetEntreprise.DAO
                 {
                     Nom = nom,
                     Prenom = reader.GetString(1),
-                    DateNaissance = reader.GetString(2),
+                    DateNaissance = (DateTime)reader.GetSqlDateTime(2),
                     MDP1 = reader.GetString(3),
                     NomServicePersonne = reader.GetString(4),
                     NomTypeCollab = reader.GetString(4),
@@ -98,10 +98,10 @@ namespace TpIntranetEntreprise.DAO
                     MatriculeCollab = reader.GetInt32(0),
                     Nom = reader.GetString(1),
                     Prenom = reader.GetString(2),
-                    DateNaissance= reader.GetString(3),
+                    DateNaissance= (DateTime)reader.GetSqlDateTime(3),
                     MDP1 = reader.GetString(4),
                     NomServicePersonne = reader.GetString(5),
-                    NomTypeCollab = reader.GetString(5),
+                    NomTypeCollab = reader.GetString(6),
                 };
                 comptas.Add(c);
             }

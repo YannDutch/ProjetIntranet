@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using TpIntranetEntreprise.Models;
-using TpIntranetEntreprise.Models.Collaborateur;
+using TpIntranetEntreprise.Models.Personne;
 using TpIntranetEntreprise.Tools;
 using TpIntranetEntreprise.DAO;
 using System.Collections;

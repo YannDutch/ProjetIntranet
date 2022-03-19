@@ -2,11 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Text;
-using TpIntranetEntreprise.DAO;
 using TpIntranetEntreprise.Models.Action;
 
-namespace TpIntranetEntreprise.Models.Action
+namespace TpIntranetEntreprise.DAO
 {
     class MissionCollabDAO : BaseDAO<MissionCollab>
     {
